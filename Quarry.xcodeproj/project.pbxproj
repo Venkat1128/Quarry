@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		075F056F1CD4C7A6006626FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F056E1CD4C7A6006626FA /* AppDelegate.swift */; };
-		075F05711CD4C7A6006626FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F05701CD4C7A6006626FA /* ViewController.swift */; };
 		075F05741CD4C7A6006626FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075F05721CD4C7A6006626FA /* Main.storyboard */; };
 		075F05761CD4C7A6006626FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 075F05751CD4C7A6006626FA /* Assets.xcassets */; };
 		075F05791CD4C7A6006626FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075F05771CD4C7A6006626FA /* LaunchScreen.storyboard */; };
 		075F05841CD4C7A6006626FA /* QuarryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F05831CD4C7A6006626FA /* QuarryTests.swift */; };
 		075F058F1CD4C7A6006626FA /* QuarryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F058E1CD4C7A6006626FA /* QuarryUITests.swift */; };
+		075F05A31CD54C8C006626FA /* QuarryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F05A21CD54C8C006626FA /* QuarryCollectionViewController.swift */; };
+		075F05A51CD55516006626FA /* QuarryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F05A41CD55516006626FA /* QuarryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		075F056B1CD4C7A5006626FA /* Quarry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quarry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		075F056E1CD4C7A6006626FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		075F05701CD4C7A6006626FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		075F05731CD4C7A6006626FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		075F05751CD4C7A6006626FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		075F05781CD4C7A6006626FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		075F058A1CD4C7A6006626FA /* QuarryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuarryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		075F058E1CD4C7A6006626FA /* QuarryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuarryUITests.swift; sourceTree = "<group>"; };
 		075F05901CD4C7A6006626FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		075F05A21CD54C8C006626FA /* QuarryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryCollectionViewController.swift; sourceTree = "<group>"; };
+		075F05A41CD55516006626FA /* QuarryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				075F056E1CD4C7A6006626FA /* AppDelegate.swift */,
-				075F05701CD4C7A6006626FA /* ViewController.swift */,
+				075F05A21CD54C8C006626FA /* QuarryCollectionViewController.swift */,
+				075F05A41CD55516006626FA /* QuarryCollectionViewCell.swift */,
 				075F05721CD4C7A6006626FA /* Main.storyboard */,
 				075F05751CD4C7A6006626FA /* Assets.xcassets */,
 				075F05771CD4C7A6006626FA /* LaunchScreen.storyboard */,
@@ -256,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				075F05711CD4C7A6006626FA /* ViewController.swift in Sources */,
+				075F05A51CD55516006626FA /* QuarryCollectionViewCell.swift in Sources */,
+				075F05A31CD54C8C006626FA /* QuarryCollectionViewController.swift in Sources */,
 				075F056F1CD4C7A6006626FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +488,7 @@
 				075F05951CD4C7A6006626FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		075F05961CD4C7A6006626FA /* Build configuration list for PBXNativeTarget "QuarryTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				075F05981CD4C7A6006626FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		075F05991CD4C7A6006626FA /* Build configuration list for PBXNativeTarget "QuarryUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				075F059B1CD4C7A6006626FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
