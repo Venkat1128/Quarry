@@ -21,7 +21,7 @@ class QuarryCollectionViewController: UICollectionViewController {
         // Register cell classes
         //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsetsMake(50, 10, 50, 10)
+        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
         self.collectionView?.collectionViewLayout = layout
         
         // Do any additional setup after loading the view.
@@ -79,7 +79,11 @@ class QuarryCollectionViewController: UICollectionViewController {
         return CGSize(width: ((width / 2) - 15)   , height: ((hight/3)-35))
     }
     // MARK: UICollectionViewDelegate
-    
+   /* override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
+        
+    }*/
+
     /*
      // Uncomment this method to specify if the specified item should be highlighted during tracking
      override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {

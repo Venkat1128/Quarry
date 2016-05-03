@@ -15,6 +15,7 @@
 		075F058F1CD4C7A6006626FA /* QuarryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F058E1CD4C7A6006626FA /* QuarryUITests.swift */; };
 		075F05A31CD54C8C006626FA /* QuarryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F05A21CD54C8C006626FA /* QuarryCollectionViewController.swift */; };
 		075F05A51CD55516006626FA /* QuarryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F05A41CD55516006626FA /* QuarryCollectionViewCell.swift */; };
+		07D9D7571CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D9D7561CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		075F05901CD4C7A6006626FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		075F05A21CD54C8C006626FA /* QuarryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryCollectionViewController.swift; sourceTree = "<group>"; };
 		075F05A41CD55516006626FA /* QuarryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryCollectionViewCell.swift; sourceTree = "<group>"; };
+		07D9D7561CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				075F056E1CD4C7A6006626FA /* AppDelegate.swift */,
 				075F05A21CD54C8C006626FA /* QuarryCollectionViewController.swift */,
 				075F05A41CD55516006626FA /* QuarryCollectionViewCell.swift */,
+				07D9D7561CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift */,
 				075F05721CD4C7A6006626FA /* Main.storyboard */,
 				075F05751CD4C7A6006626FA /* Assets.xcassets */,
 				075F05771CD4C7A6006626FA /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				075F05A51CD55516006626FA /* QuarryCollectionViewCell.swift in Sources */,
 				075F05A31CD54C8C006626FA /* QuarryCollectionViewController.swift in Sources */,
+				07D9D7571CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift in Sources */,
 				075F056F1CD4C7A6006626FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +338,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Venkatesh Kurapati (CA24B2HMYA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Venkatesh Kurapati (CA24B2HMYA)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -356,6 +361,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "4ed0ca6c-8e64-4e47-b43c-ffd50cb7937b";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -380,7 +386,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Venkatesh Kurapati (CA24B2HMYA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Venkatesh Kurapati (CA24B2HMYA)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -395,6 +402,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "4ed0ca6c-8e64-4e47-b43c-ffd50cb7937b";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
