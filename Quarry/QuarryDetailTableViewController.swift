@@ -12,7 +12,7 @@ class QuarryDetailTableViewController: UITableViewController {
     var tableViewListItems = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Quarry"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -44,6 +44,7 @@ class QuarryDetailTableViewController: UITableViewController {
         
         // Configure the cell...
         cell.textLabel?.text = self.tableViewListItems[indexPath.row]
+        cell.textLabel?.font = cell.textLabel?.font.fontWithSize(20)
         return cell
     }
     
