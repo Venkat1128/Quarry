@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0739C36C1CE63565003C95B4 /* QuarryPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739C36B1CE63565003C95B4 /* QuarryPageContentViewController.swift */; };
 		075F056F1CD4C7A6006626FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F056E1CD4C7A6006626FA /* AppDelegate.swift */; };
 		075F05741CD4C7A6006626FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075F05721CD4C7A6006626FA /* Main.storyboard */; };
 		075F05761CD4C7A6006626FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 075F05751CD4C7A6006626FA /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0739C36B1CE63565003C95B4 /* QuarryPageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryPageContentViewController.swift; sourceTree = "<group>"; };
 		075F056B1CD4C7A5006626FA /* Quarry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quarry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		075F056E1CD4C7A6006626FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		075F05731CD4C7A6006626FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				075F05751CD4C7A6006626FA /* Assets.xcassets */,
 				075F05771CD4C7A6006626FA /* LaunchScreen.storyboard */,
 				075F057A1CD4C7A6006626FA /* Info.plist */,
+				0739C36B1CE63565003C95B4 /* QuarryPageContentViewController.swift */,
 			);
 			path = Quarry;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				075F05A51CD55516006626FA /* QuarryCollectionViewCell.swift in Sources */,
 				075F05A31CD54C8C006626FA /* QuarryCollectionViewController.swift in Sources */,
 				07D9D7571CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift in Sources */,
+				0739C36C1CE63565003C95B4 /* QuarryPageContentViewController.swift in Sources */,
 				075F056F1CD4C7A6006626FA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
