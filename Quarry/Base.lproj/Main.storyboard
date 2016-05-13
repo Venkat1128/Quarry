@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Quarry-->
@@ -21,28 +22,36 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="QuarryCustomCell" id="M0T-2v-uaV" customClass="QuarryCollectionViewCell" customModule="Quarry" customModuleProvider="target">
-                                <rect key="frame" x="5" y="69" width="50" height="50"/>
+                                <rect key="frame" x="5" y="69" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nw-GQ-gzV">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="5" y="40" width="50" height="16.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2Z-ef-Jxa">
+                                            <rect key="frame" x="5" y="5" width="50" height="35"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="6Nw-GQ-gzV" firstAttribute="leading" secondItem="M0T-2v-uaV" secondAttribute="leading" id="3GC-eD-DLD"/>
-                                    <constraint firstAttribute="trailing" secondItem="6Nw-GQ-gzV" secondAttribute="trailing" id="3jp-8l-sq2"/>
-                                    <constraint firstAttribute="bottom" secondItem="6Nw-GQ-gzV" secondAttribute="bottom" id="aWD-wn-hM0"/>
-                                    <constraint firstItem="6Nw-GQ-gzV" firstAttribute="top" secondItem="M0T-2v-uaV" secondAttribute="top" id="iBM-Es-jmr"/>
+                                    <constraint firstItem="6Nw-GQ-gzV" firstAttribute="leading" secondItem="M0T-2v-uaV" secondAttribute="leading" constant="5" id="3GC-eD-DLD"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Nw-GQ-gzV" secondAttribute="trailing" constant="5" id="3jp-8l-sq2"/>
+                                    <constraint firstItem="6Nw-GQ-gzV" firstAttribute="top" secondItem="N2Z-ef-Jxa" secondAttribute="bottom" id="QH4-5d-kXq"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Nw-GQ-gzV" secondAttribute="bottom" constant="3.5" id="YfC-be-tUA"/>
+                                    <constraint firstItem="N2Z-ef-Jxa" firstAttribute="leading" secondItem="M0T-2v-uaV" secondAttribute="leading" constant="5" id="fDR-wE-duh"/>
+                                    <constraint firstItem="N2Z-ef-Jxa" firstAttribute="trailing" secondItem="M0T-2v-uaV" secondAttribute="trailingMargin" constant="3" id="gGZ-y0-fTq"/>
+                                    <constraint firstItem="N2Z-ef-Jxa" firstAttribute="top" secondItem="M0T-2v-uaV" secondAttribute="top" constant="5" id="lp9-fe-WiY"/>
                                 </constraints>
+                                <size key="customSize" width="60" height="60"/>
                                 <connections>
+                                    <outlet property="bgImage" destination="N2Z-ef-Jxa" id="5eB-Au-xMn"/>
                                     <outlet property="textLabel" destination="6Nw-GQ-gzV" id="pTM-Nn-TrL"/>
                                     <segue destination="E2h-LC-xsW" kind="show" id="ODv-PU-o8W"/>
                                 </connections>

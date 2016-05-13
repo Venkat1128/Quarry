@@ -11,4 +11,5 @@ import UIKit
 class QuarryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var textLabel: UILabel!
     
+    @IBOutlet weak var bgImage: UIImageView!
 }

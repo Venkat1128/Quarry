@@ -12,6 +12,7 @@ private let reuseIdentifier = "QuarryCustomCell"
 
 class QuarryCollectionViewController: UICollectionViewController {
     var dashBoardItems = [String]()
+    var imageArry = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +26,8 @@ class QuarryCollectionViewController: UICollectionViewController {
         self.collectionView?.collectionViewLayout = layout
         
         // Do any additional setup after loading the view.
-        self.dashBoardItems = ["Having a meeting ?","Writing a proposal ?","Challenging stakeholder ?","?","?","?"]
+        self.dashBoardItems = ["Having a meeting ?","Writing a proposal ?","Challenging stakeholder ?","Having a meeting ?","Writing a proposal ?","Challenging stakeholder ?"]
+        self.imageArry = ["meeting.png","proposal.png","challenge.png","meeting.png","proposal.png","challenge.png"];
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,15 +60,23 @@ class QuarryCollectionViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! QuarryCollectionViewCell
-        cell.backgroundColor = UIColor(
+       /* cell.backgroundColor = UIColor(
             red:63.0/255.0,
             green:108.0/255.0,
             blue:175.0/255.0,
-            alpha:1.0)
+            alpha:1.0)*/
         cell.textLabel.text = dashBoardItems[indexPath.row]
-        cell.textLabel.textColor = UIColor.whiteColor()
-        // Configure the cell
+        cell.textLabel.textColor = UIColor.blueColor()
         
+        
+        
+        
+        let image : UIImage = UIImage(named: imageArry[indexPath.row])!
+        cell.bgImage.image = image
+        // Configure the cell
+        cell.layer.borderColor = UIColor.grayColor().CGColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 8
         return cell
     }
     func collectionView(collectionView: UICollectionView,
