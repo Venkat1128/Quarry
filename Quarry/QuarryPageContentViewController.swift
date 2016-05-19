@@ -12,9 +12,18 @@ class QuarryPageContentViewController: UIViewController {
 
     @IBOutlet weak var topicpptImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    var pageIndex: Int?
+    var titleText : String!
+    var imageName : String!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.topicpptImage.image = UIImage(named: imageName)
+        self.titleLabel.text = self.titleText
+        self.titleLabel.alpha = 0.1
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            self.titleLabel.alpha = 1.0
+        })
         // Do any additional setup after loading the view.
     }
 

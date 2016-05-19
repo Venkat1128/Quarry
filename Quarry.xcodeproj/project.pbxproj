@@ -16,6 +16,7 @@
 		075F058F1CD4C7A6006626FA /* QuarryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F058E1CD4C7A6006626FA /* QuarryUITests.swift */; };
 		075F05A31CD54C8C006626FA /* QuarryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F05A21CD54C8C006626FA /* QuarryCollectionViewController.swift */; };
 		075F05A51CD55516006626FA /* QuarryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F05A41CD55516006626FA /* QuarryCollectionViewCell.swift */; };
+		076A31F31CEE157800A95407 /* QuarryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A31F21CEE157800A95407 /* QuarryPageViewController.swift */; };
 		07D9D7571CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D9D7561CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		075F05901CD4C7A6006626FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		075F05A21CD54C8C006626FA /* QuarryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryCollectionViewController.swift; sourceTree = "<group>"; };
 		075F05A41CD55516006626FA /* QuarryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryCollectionViewCell.swift; sourceTree = "<group>"; };
+		076A31F21CEE157800A95407 /* QuarryPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryPageViewController.swift; sourceTree = "<group>"; };
 		07D9D7561CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 				075F05771CD4C7A6006626FA /* LaunchScreen.storyboard */,
 				075F057A1CD4C7A6006626FA /* Info.plist */,
 				0739C36B1CE63565003C95B4 /* QuarryPageContentViewController.swift */,
+				076A31F21CEE157800A95407 /* QuarryPageViewController.swift */,
 			);
 			path = Quarry;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				075F05A51CD55516006626FA /* QuarryCollectionViewCell.swift in Sources */,
+				076A31F31CEE157800A95407 /* QuarryPageViewController.swift in Sources */,
 				075F05A31CD54C8C006626FA /* QuarryCollectionViewController.swift in Sources */,
 				07D9D7571CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift in Sources */,
 				0739C36C1CE63565003C95B4 /* QuarryPageContentViewController.swift in Sources */,
