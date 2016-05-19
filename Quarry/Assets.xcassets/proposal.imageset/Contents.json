@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Edit Property-48.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Proposal.png",
+      "filename" : "Edit Property-96.png",
       "scale" : "2x"
     },
     {

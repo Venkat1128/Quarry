@@ -66,7 +66,7 @@ class QuarryCollectionViewController: UICollectionViewController {
             blue:175.0/255.0,
             alpha:1.0)*/
         cell.textLabel.text = dashBoardItems[indexPath.row]
-        cell.textLabel.textColor = UIColor.blueColor()
+        cell.textLabel.textColor = UIColor.blackColor()
         
         
         

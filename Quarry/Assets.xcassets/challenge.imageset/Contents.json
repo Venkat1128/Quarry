@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Hard to Find-48.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Challenge.png",
+      "filename" : "Hard to Find-96.png",
       "scale" : "2x"
     },
     {

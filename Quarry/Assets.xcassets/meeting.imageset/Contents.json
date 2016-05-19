@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Meeting-48.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Meeting.png",
+      "filename" : "Meeting-96.png",
       "scale" : "2x"
     },
     {
