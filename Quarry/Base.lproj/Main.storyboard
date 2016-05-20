@@ -53,6 +53,7 @@
                                 <connections>
                                     <outlet property="bgImage" destination="N2Z-ef-Jxa" id="5eB-Au-xMn"/>
                                     <outlet property="textLabel" destination="6Nw-GQ-gzV" id="pTM-Nn-TrL"/>
+                                    <segue destination="eSp-dX-9q1" kind="showDetail" id="XL4-Fu-zQp"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -107,7 +108,7 @@
         <!--Quarry Page Content View Controller-->
         <scene sceneID="Euk-aY-Rls">
             <objects>
-                <viewController storyboardIdentifier="PageContentController" id="wBr-0S-yeq" customClass="QuarryPageContentViewController" customModule="Quarry" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageContentViewController" id="wBr-0S-yeq" customClass="QuarryPageContentViewController" customModule="Quarry" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xb1-4d-gO1"/>
                         <viewControllerLayoutGuide type="bottom" id="sqi-GO-mgb"/>

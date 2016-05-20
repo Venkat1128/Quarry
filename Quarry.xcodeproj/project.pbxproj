@@ -17,6 +17,10 @@
 		075F05A31CD54C8C006626FA /* QuarryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F05A21CD54C8C006626FA /* QuarryCollectionViewController.swift */; };
 		075F05A51CD55516006626FA /* QuarryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F05A41CD55516006626FA /* QuarryCollectionViewCell.swift */; };
 		076A31F31CEE157800A95407 /* QuarryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A31F21CEE157800A95407 /* QuarryPageViewController.swift */; };
+		076A31F91CEF0E4B00A95407 /* page1.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A31F51CEF0E4B00A95407 /* page1.png */; };
+		076A31FA1CEF0E4B00A95407 /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A31F61CEF0E4B00A95407 /* page2.png */; };
+		076A31FB1CEF0E4B00A95407 /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A31F71CEF0E4B00A95407 /* page3.png */; };
+		076A31FC1CEF0E4B00A95407 /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A31F81CEF0E4B00A95407 /* page4.png */; };
 		07D9D7571CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D9D7561CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +58,10 @@
 		075F05A21CD54C8C006626FA /* QuarryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryCollectionViewController.swift; sourceTree = "<group>"; };
 		075F05A41CD55516006626FA /* QuarryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryCollectionViewCell.swift; sourceTree = "<group>"; };
 		076A31F21CEE157800A95407 /* QuarryPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryPageViewController.swift; sourceTree = "<group>"; };
+		076A31F51CEF0E4B00A95407 /* page1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page1.png; sourceTree = "<group>"; };
+		076A31F61CEF0E4B00A95407 /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
+		076A31F71CEF0E4B00A95407 /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
+		076A31F81CEF0E4B00A95407 /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
 		07D9D7561CD8ECDC0070BDB2 /* QuarryDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +113,7 @@
 		075F056D1CD4C7A6006626FA /* Quarry */ = {
 			isa = PBXGroup;
 			children = (
+				076A31F41CEF0E2F00A95407 /* Images */,
 				075F056E1CD4C7A6006626FA /* AppDelegate.swift */,
 				075F05A21CD54C8C006626FA /* QuarryCollectionViewController.swift */,
 				075F05A41CD55516006626FA /* QuarryCollectionViewCell.swift */,
@@ -135,6 +144,17 @@
 				075F05901CD4C7A6006626FA /* Info.plist */,
 			);
 			path = QuarryUITests;
+			sourceTree = "<group>";
+		};
+		076A31F41CEF0E2F00A95407 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				076A31F51CEF0E4B00A95407 /* page1.png */,
+				076A31F61CEF0E4B00A95407 /* page2.png */,
+				076A31F71CEF0E4B00A95407 /* page3.png */,
+				076A31F81CEF0E4B00A95407 /* page4.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +263,11 @@
 			files = (
 				075F05791CD4C7A6006626FA /* LaunchScreen.storyboard in Resources */,
 				075F05761CD4C7A6006626FA /* Assets.xcassets in Resources */,
+				076A31FB1CEF0E4B00A95407 /* page3.png in Resources */,
+				076A31FC1CEF0E4B00A95407 /* page4.png in Resources */,
+				076A31F91CEF0E4B00A95407 /* page1.png in Resources */,
 				075F05741CD4C7A6006626FA /* Main.storyboard in Resources */,
+				076A31FA1CEF0E4B00A95407 /* page2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
