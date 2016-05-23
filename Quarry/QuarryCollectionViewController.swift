@@ -42,8 +42,7 @@ class QuarryCollectionViewController: UICollectionViewController {
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
      // Get the new view controller using [segue destinationViewController].
      // Pass the selected object to the new view controller.
-        let destinationView  = segue.destinationViewController as! QuarryPageViewController
-        destinationView.catTitleText = pageCatTiteText
+        
      }
  
     
@@ -93,8 +92,10 @@ class QuarryCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
+        let destinationView  = QuarryPageViewController()
         pageCatTiteText = dashBoardItems[indexPath.row]
-        
+        destinationView.catTitleText = pageCatTiteText
+       // destinationView.performSegueWithIdentifier("quarryPageSegue", sender: self)
     }
 
     /*

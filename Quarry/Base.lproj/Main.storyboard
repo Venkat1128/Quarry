@@ -53,7 +53,7 @@
                                 <connections>
                                     <outlet property="bgImage" destination="N2Z-ef-Jxa" id="5eB-Au-xMn"/>
                                     <outlet property="textLabel" destination="6Nw-GQ-gzV" id="pTM-Nn-TrL"/>
-                                    <segue destination="eSp-dX-9q1" kind="show" id="XL4-Fu-zQp"/>
+                                    <segue destination="eSp-dX-9q1" kind="show" identifier="quarryPageSegue" id="qqN-cf-s16"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b64-Yh-JK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1719" y="98"/>
+            <point key="canvasLocation" x="1801" y="98"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="v40-eG-Nme">
@@ -106,7 +106,7 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pVo-VP-NfQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHr-Pb-LJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2354" y="98"/>
+            <point key="canvasLocation" x="2685" y="61"/>
         </scene>
         <!--Quarry Page Content View Controller-->
         <scene sceneID="Euk-aY-Rls">
