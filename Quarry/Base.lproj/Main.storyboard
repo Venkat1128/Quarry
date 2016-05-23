@@ -88,6 +88,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bQn-9C-goa" firstAttribute="leading" secondItem="ouL-hD-iJa" secondAttribute="leading" constant="20" id="1Ru-Wl-PFa"/>
                             <constraint firstItem="hAV-Sr-7wQ" firstAttribute="top" secondItem="bQn-9C-goa" secondAttribute="bottom" id="a5W-KA-zui"/>
@@ -148,6 +149,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWz-xD-bkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1767" y="759"/>
+        </scene>
+        <!--Quarry Page Content Detail View Controller-->
+        <scene sceneID="mqO-fr-3dI">
+            <objects>
+                <viewController storyboardIdentifier="QuarryPageContentDetailViewController" id="HzH-fF-Kr6" customClass="QuarryPageContentDetailViewController" customModule="Quarry" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fsT-sL-lhd"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Ks-bq-k60"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I6e-S7-BdA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-kd-ISm">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">The telecommunications market is undergoing an unprecedented degree of change. The technology advancements in fiber and 3G LTE, and the increasing popularity of MVNOs and MTM are dramatically changing the way consumers engage with telecommunications providers. The expectation of the consumer and the variety of the technology choices pose increasing challenges to traditional and new players alike.
+With our parent company, NTT, operating as the largest global telecommunication organisation in the world, NTT DATA is uniquely placed to understand the pressures and challenges of your sector and offers specific solutions for governing and monitoring its key processes.
+Why NTT DATA?
+With NTT DATA as your transformation partner, you can:
+Increase process efficiency
+Improve customer value and open up new sales channels
+Find new ways to engage the consumer
+Optimise your investments
+We emphasise local accountability and use a flexible mix of global delivery resources — all geared toward the goal of providing practical and actionable recommendations and right-sized services tightly aligned to your needs.
+- See more at: http://emea.nttdata.com/uk/industries/telecommunications/overview/en/index.html#sthash.L8fmBDQR.dpuf</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailTextView" destination="RLw-kd-ISm" id="Iy5-gA-c0g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBX-Qb-Lxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2423" y="756"/>
         </scene>
         <!--Quarry-->
         <scene sceneID="4v2-GN-i4q">

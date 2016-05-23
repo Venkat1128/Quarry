@@ -21,6 +21,7 @@
 		076A31FA1CEF0E4B00A95407 /* page2.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A31F61CEF0E4B00A95407 /* page2.png */; };
 		076A31FB1CEF0E4B00A95407 /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A31F71CEF0E4B00A95407 /* page3.png */; };
 		076A31FC1CEF0E4B00A95407 /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 076A31F81CEF0E4B00A95407 /* page4.png */; };
+		076B89A01CF34D1A001FE9CD /* QuarryPageContentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076B899F1CF34D1A001FE9CD /* QuarryPageContentDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		076A31F61CEF0E4B00A95407 /* page2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page2.png; sourceTree = "<group>"; };
 		076A31F71CEF0E4B00A95407 /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
 		076A31F81CEF0E4B00A95407 /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
+		076B899F1CF34D1A001FE9CD /* QuarryPageContentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryPageContentDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				075F057A1CD4C7A6006626FA /* Info.plist */,
 				0739C36B1CE63565003C95B4 /* QuarryPageContentViewController.swift */,
 				076A31F21CEE157800A95407 /* QuarryPageViewController.swift */,
+				076B899F1CF34D1A001FE9CD /* QuarryPageContentDetailViewController.swift */,
 			);
 			path = Quarry;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			files = (
 				075F05A51CD55516006626FA /* QuarryCollectionViewCell.swift in Sources */,
 				076A31F31CEE157800A95407 /* QuarryPageViewController.swift in Sources */,
+				076B89A01CF34D1A001FE9CD /* QuarryPageContentDetailViewController.swift in Sources */,
 				075F05A31CD54C8C006626FA /* QuarryCollectionViewController.swift in Sources */,
 				0739C36C1CE63565003C95B4 /* QuarryPageContentViewController.swift in Sources */,
 				075F056F1CD4C7A6006626FA /* AppDelegate.swift in Sources */,

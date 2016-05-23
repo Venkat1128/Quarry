@@ -7,12 +7,12 @@
 //
 
 import UIKit
-
 private let reuseIdentifier = "QuarryCustomCell"
 
 class QuarryCollectionViewController: UICollectionViewController {
     var dashBoardItems = [String]()
     var imageArry = [String]()
+    var pageCatTiteText : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,15 +35,17 @@ class QuarryCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
      // Get the new view controller using [segue destinationViewController].
      // Pass the selected object to the new view controller.
+        let destinationView  = segue.destinationViewController as! QuarryPageViewController
+        destinationView.catTitleText = pageCatTiteText
      }
-     */
+ 
     
     // MARK: UICollectionViewDataSource
     
@@ -89,10 +91,11 @@ class QuarryCollectionViewController: UICollectionViewController {
         return CGSize(width: ((width / 2) - 15)   , height: ((hight/3)-35))
     }
     // MARK: UICollectionViewDelegate
-   /* override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        //collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
+        pageCatTiteText = dashBoardItems[indexPath.row]
         
-    }*/
+    }
 
     /*
      // Uncomment this method to specify if the specified item should be highlighted during tracking

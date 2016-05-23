@@ -12,12 +12,12 @@ class QuarryPageViewController: UIViewController , UIPageViewControllerDataSourc
     let pageTitles = ["Title 1", "Title 2", "Title 3", "Title 4"]
     var images = ["page1.png", "page2.png", "page3.png", "page4.png"];
     var count = 0
-    
+    var catTitleText : String?
     var pageViewController = UIPageViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Having a meeting"
+        self.title = catTitleText
         reset()
         // Do any additional setup after loading the view.
     }
