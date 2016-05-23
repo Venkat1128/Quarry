@@ -53,7 +53,7 @@
                                 <connections>
                                     <outlet property="bgImage" destination="N2Z-ef-Jxa" id="5eB-Au-xMn"/>
                                     <outlet property="textLabel" destination="6Nw-GQ-gzV" id="pTM-Nn-TrL"/>
-                                    <segue destination="eSp-dX-9q1" kind="showDetail" id="XL4-Fu-zQp"/>
+                                    <segue destination="eSp-dX-9q1" kind="show" id="XL4-Fu-zQp"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -81,14 +81,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQn-9C-goa">
-                                <rect key="frame" x="20" y="529" width="560" height="30"/>
-                                <state key="normal" title="Start"/>
+                                <rect key="frame" x="20" y="570" width="560" height="30"/>
+                                <state key="normal" title="Start again"/>
+                                <connections>
+                                    <action selector="start:" destination="eSp-dX-9q1" eventType="touchUpInside" id="QAv-FU-B08"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bQn-9C-goa" firstAttribute="leading" secondItem="ouL-hD-iJa" secondAttribute="leading" constant="20" id="1Ru-Wl-PFa"/>
-                            <constraint firstItem="hAV-Sr-7wQ" firstAttribute="top" secondItem="bQn-9C-goa" secondAttribute="bottom" constant="41" id="a5W-KA-zui"/>
+                            <constraint firstItem="hAV-Sr-7wQ" firstAttribute="top" secondItem="bQn-9C-goa" secondAttribute="bottom" id="a5W-KA-zui"/>
                             <constraint firstAttribute="trailing" secondItem="bQn-9C-goa" secondAttribute="trailing" constant="20" id="mos-ni-3Oy"/>
                         </constraints>
                     </view>
@@ -100,7 +102,7 @@
         <!--Page View Controller-->
         <scene sceneID="v40-eG-Nme">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="pVo-VP-NfQ" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pVo-VP-NfQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHr-Pb-LJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2354" y="98"/>

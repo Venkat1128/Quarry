@@ -13,10 +13,11 @@ class QuarryPageViewController: UIViewController , UIPageViewControllerDataSourc
     var images = ["page1.png", "page2.png", "page3.png", "page4.png"];
     var count = 0
     
-    var pageViewController = QuarryPageViewController()
+    var pageViewController = UIPageViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Having a meeting"
         reset()
         // Do any additional setup after loading the view.
     }
@@ -36,10 +37,14 @@ class QuarryPageViewController: UIViewController , UIPageViewControllerDataSourc
      // Pass the selected object to the new view controller.
      }
      */
+    @IBAction func start(sender: AnyObject) {
+        let pageContentViewController = self.viewControllerAtIndex(0)
+        self.pageViewController.setViewControllers([pageContentViewController!], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+    }
     
     func reset() {
         /* Getting the page View controller */
-        pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! QuarryPageViewController
+        pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
         
         let pageContentViewController = self.viewControllerAtIndex(0)
