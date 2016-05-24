@@ -16,6 +16,7 @@ class QuarryPageContentViewController: UIViewController {
     var pageIndex: Int?
     var titleText : String!
     var imageName : String!
+    let imageTapgeature = UITapGestureRecognizer()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.topicpptImage.image = UIImage(named: imageName)
@@ -24,6 +25,8 @@ class QuarryPageContentViewController: UIViewController {
         UIView.animateWithDuration(1.0, animations: { () -> Void in
             self.titleLabel.alpha = 1.0
         })
+        
+        imageTapgeature.addTarget(self, action: "tappedView")
         // Do any additional setup after loading the view.
     }
 
@@ -42,5 +45,7 @@ class QuarryPageContentViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func tappedView(){
+        
+    }
 }
