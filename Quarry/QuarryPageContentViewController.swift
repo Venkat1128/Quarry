@@ -26,8 +26,9 @@ class QuarryPageContentViewController: UIViewController {
             self.titleLabel.alpha = 1.0
         })
         
-        imageTapgeature.addTarget(self, action: "tappedView")
-        // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(QuarryPageContentViewController.tappedView))
+        topicpptImage.addGestureRecognizer(tap)
+        topicpptImage.userInteractionEnabled = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +47,12 @@ class QuarryPageContentViewController: UIViewController {
     }
     */
     func tappedView(){
-        
+        let detailViewText = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController")
+        let navController = UINavigationController(rootViewController: detailViewText!)
+        detailViewText!.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done,target: self,action: #selector(QuarryPageContentViewController.dismiss))
+        self.presentViewController(navController, animated: true, completion: nil)
+    }
+    func dismiss(){
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

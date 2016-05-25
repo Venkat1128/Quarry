@@ -69,9 +69,7 @@ class QuarryCollectionViewController: UICollectionViewController {
         cell.textLabel.text = dashBoardItems[indexPath.row]
         cell.textLabel.textColor = UIColor.blackColor()
         
-        
-        
-        
+              
         let image : UIImage = UIImage(named: imageArry[indexPath.row])!
         cell.bgImage.image = image
         // Configure the cell

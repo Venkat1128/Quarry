@@ -13,7 +13,7 @@ class QuarryPageContentDetailViewController: UIViewController {
     @IBOutlet weak var detailTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-detailTextView.text = "";
+       // detailTextView.text = "";
         // Do any additional setup after loading the view.
     }
 

@@ -81,8 +81,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQn-9C-goa">
-                                <rect key="frame" x="20" y="570" width="560" height="30"/>
+                                <rect key="frame" x="250" y="565" width="100" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="hfk-dj-XK3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Start again"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="9"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="start:" destination="eSp-dX-9q1" eventType="touchUpInside" id="QAv-FU-B08"/>
                                 </connections>
@@ -90,9 +99,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bQn-9C-goa" firstAttribute="leading" secondItem="ouL-hD-iJa" secondAttribute="leading" constant="20" id="1Ru-Wl-PFa"/>
-                            <constraint firstItem="hAV-Sr-7wQ" firstAttribute="top" secondItem="bQn-9C-goa" secondAttribute="bottom" id="a5W-KA-zui"/>
-                            <constraint firstAttribute="trailing" secondItem="bQn-9C-goa" secondAttribute="trailing" constant="20" id="mos-ni-3Oy"/>
+                            <constraint firstItem="bQn-9C-goa" firstAttribute="centerX" secondItem="ouL-hD-iJa" secondAttribute="centerX" id="Xtn-hv-coB"/>
+                            <constraint firstItem="hAV-Sr-7wQ" firstAttribute="top" secondItem="bQn-9C-goa" secondAttribute="bottom" constant="5" id="aI9-JL-aW2"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -106,7 +114,7 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pVo-VP-NfQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHr-Pb-LJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2685" y="61"/>
+            <point key="canvasLocation" x="2454" y="69"/>
         </scene>
         <!--Quarry Page Content View Controller-->
         <scene sceneID="Euk-aY-Rls">
@@ -148,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWz-xD-bkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1767" y="759"/>
+            <point key="canvasLocation" x="1192" y="744"/>
         </scene>
         <!--Quarry Page Content Detail View Controller-->
         <scene sceneID="mqO-fr-3dI">
@@ -162,10 +170,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-kd-ISm">
-                                <rect key="frame" x="20" y="20" width="560" height="560"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">The telecommunications market is undergoing an unprecedented degree of change. The technology advancements in fiber and 3G LTE, and the increasing popularity of MVNOs and MTM are dramatically changing the way consumers engage with telecommunications providers. The expectation of the consumer and the variety of the technology choices pose increasing challenges to traditional and new players alike.
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-kd-ISm">
+                                <rect key="frame" x="20" y="40" width="560" height="540"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">The telecommunications market is undergoing an unprecedented degree of change. The technology advancements in fiber and 3G LTE, and the increasing popularity of MVNOs and MTM are dramatically changing the way consumers engage with telecommunications providers. The expectation of the consumer and the variety of the technology choices pose increasing challenges to traditional and new players alike.
 With our parent company, NTT, operating as the largest global telecommunication organisation in the world, NTT DATA is uniquely placed to understand the pressures and challenges of your sector and offers specific solutions for governing and monitoring its key processes.
 Why NTT DATA?
 With NTT DATA as your transformation partner, you can:
@@ -174,21 +182,28 @@ Improve customer value and open up new sales channels
 Find new ways to engage the consumer
 Optimise your investments
 We emphasise local accountability and use a flexible mix of global delivery resources — all geared toward the goal of providing practical and actionable recommendations and right-sized services tightly aligned to your needs.
-- See more at: http://emea.nttdata.com/uk/industries/telecommunications/overview/en/index.html#sthash.L8fmBDQR.dpuf</mutableString>
+- See more at: http://emea.nttdata.com/uk/industries/telecommunications/overview/en/index.html#sthash.L8fmBDQR.dpuf</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RLw-kd-ISm" secondAttribute="trailing" constant="20" id="cEx-ng-9KB"/>
+                            <constraint firstItem="RLw-kd-ISm" firstAttribute="top" secondItem="fsT-sL-lhd" secondAttribute="bottom" constant="20" id="hlj-WX-Idw"/>
+                            <constraint firstItem="5Ks-bq-k60" firstAttribute="top" secondItem="RLw-kd-ISm" secondAttribute="bottom" constant="20" id="iCt-8z-aeo"/>
+                            <constraint firstItem="RLw-kd-ISm" firstAttribute="leading" secondItem="I6e-S7-BdA" secondAttribute="leading" constant="20" id="kGj-92-wPH"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="detailTextView" destination="RLw-kd-ISm" id="Iy5-gA-c0g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBX-Qb-Lxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2423" y="756"/>
+            <point key="canvasLocation" x="2231" y="759"/>
         </scene>
         <!--Quarry-->
         <scene sceneID="4v2-GN-i4q">
