@@ -24,10 +24,19 @@ class QuarryCollectionViewController: UICollectionViewController {
         let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
         self.collectionView?.collectionViewLayout = layout
+        self.collectionView?.delegate = self;
         
         // Do any additional setup after loading the view.
-        self.dashBoardItems = ["Having a meeting ?","Writing a proposal ?","Challenging stakeholder ?","Having a meeting ?","Writing a proposal ?","Challenging stakeholder ?"]
-        self.imageArry = ["meeting.png","proposal.png","challenge.png","meeting.png","proposal.png","challenge.png"];
+        self.dashBoardItems = ["Having a meeting ?","Building the relationship ?","Writing a proposal ?","Selling to the client ?","Coming soon ?","Coming soon ?"]
+        self.imageArry = ["meeting.png","challenge.png","proposal.png","meeting.png","proposal.png","challenge.png"];
+        let navBarColor = navigationController!.navigationBar
+        navBarColor.barTintColor = UIColor(
+            red:63.0/255.0,
+            green:108.0/255.0,
+            blue:175.0/255.0,
+            alpha:1.0)
+        navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,7 +51,10 @@ class QuarryCollectionViewController: UICollectionViewController {
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
      // Get the new view controller using [segue destinationViewController].
      // Pass the selected object to the new view controller.
-        
+        if segue.identifier == "quarryPageSegue" {
+            let detailsVC = segue.destinationViewController as! QuarryPageViewController
+            detailsVC.catTitleText = pageCatTiteText
+        }
      }
  
     
@@ -90,12 +102,10 @@ class QuarryCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
-        let destinationView  = QuarryPageViewController()
         pageCatTiteText = dashBoardItems[indexPath.row]
-        destinationView.catTitleText = pageCatTiteText
-       // destinationView.performSegueWithIdentifier("quarryPageSegue", sender: self)
+        self.performSegueWithIdentifier("quarryPageSegue", sender: reuseIdentifier)
     }
-
+    
     /*
      // Uncomment this method to specify if the specified item should be highlighted during tracking
      override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
