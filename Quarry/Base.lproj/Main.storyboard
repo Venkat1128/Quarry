@@ -188,6 +188,9 @@ We emphasise local accountability and use a flexible mix of global delivery reso
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="HzH-fF-Kr6" id="anq-l7-0DV"/>
+                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -200,7 +203,7 @@ We emphasise local accountability and use a flexible mix of global delivery reso
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
-                        <outlet property="detailTextView" destination="RLw-kd-ISm" id="Iy5-gA-c0g"/>
+                        <outlet property="detailTextView" destination="RLw-kd-ISm" id="gNQ-3h-MA4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBX-Qb-Lxk" userLabel="First Responder" sceneMemberID="firstResponder"/>

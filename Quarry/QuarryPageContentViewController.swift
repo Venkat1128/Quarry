@@ -17,6 +17,7 @@ class QuarryPageContentViewController: UIViewController {
     var titleText : String!
     var imageName : String!
     let imageTapgeature = UITapGestureRecognizer()
+    var detailText : String!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.topicpptImage.image = UIImage(named: imageName)
@@ -47,9 +48,10 @@ class QuarryPageContentViewController: UIViewController {
     }
     */
     func tappedView(){
-        let detailViewText = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController")
-        let navController = UINavigationController(rootViewController: detailViewText!)
-        detailViewText!.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done,target: self,action: #selector(QuarryPageContentViewController.dismiss))
+        let detailViewTextView = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
+        detailViewTextView.detailTextContent = detailText
+        let navController = UINavigationController(rootViewController: detailViewTextView)
+        detailViewTextView.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done,target: self,action: #selector(QuarryPageContentViewController.dismiss))
         self.presentViewController(navController, animated: true, completion: nil)
     }
     func dismiss(){

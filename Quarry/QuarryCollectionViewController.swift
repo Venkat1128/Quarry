@@ -13,6 +13,9 @@ class QuarryCollectionViewController: UICollectionViewController {
     var dashBoardItems = [String]()
     var imageArry = [String]()
     var pageCatTiteText : String = ""
+    var havinagAMeetingList = [QuarryModelObject]()
+    var quarryItemsDict : [String :[QuarryModelObject]] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +40,14 @@ class QuarryCollectionViewController: UICollectionViewController {
             alpha:1.0)
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
+        havinagAMeetingList.append(QuarryModelObject(topicTitle: "PREPARE", topicImageName: "prepare.png", topicDetailText: "Research\nPersonal biography\nOrganisation structure\nClient strategic objectives\nDecision network\nCompetitor presence\nPain points\nHypotheses on pain points\nScript the meeting\nIdentify the what we finds\nUnderstand the time agreement\nSecretary’s name.")!)
+        havinagAMeetingList.append(QuarryModelObject(topicTitle: "INTRODUCTION", topicImageName: "introduction.png", topicDetailText: "Ice breaker to relax client and be human Agree purpose, agenda and time commitment\nPersonal introduction to start the peer relationship\nOutline our focus on their issues, confidentially\nFirm introduction and the people we work with\nRecognise our capability is broader than experienced\nPre-empt objections with content and WWFs.")!)
+        havinagAMeetingList.append(QuarryModelObject(topicTitle: "UNDERSTANDING", topicImageName: "understanding.png", topicDetailText: "Search for the pain – and the emotion / owner\nHighlight need for acceleration / mobilisation\nShare 2-3 what we finds around the issue\nIntroduce how we work collaboratively\nUse repeated open questions to understand\nListen, listen, listen & probe for completeness\nDemonstrate empathy & understand personal stak.")!)
+        havinagAMeetingList.append(QuarryModelObject(topicTitle: "CREDIBILITY", topicImageName: "credibility.png", topicDetailText: "Where we have done it before, delivery results\nRelated issues to show true understanding\nUse their language to show what we did and not how\nManage the emotional and political issues\nConfirm issues and agree next steps\nSchedule next meeting with homework for them\nTake the next steps yourself for ownership.")!)
+        quarryItemsDict[dashBoardItems[0]] = havinagAMeetingList
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,6 +65,7 @@ class QuarryCollectionViewController: UICollectionViewController {
         if segue.identifier == "quarryPageSegue" {
             let detailsVC = segue.destinationViewController as! QuarryPageViewController
             detailsVC.catTitleText = pageCatTiteText
+            detailsVC.numberOfPages = quarryItemsDict[detailsVC.catTitleText!]!
         }
      }
  

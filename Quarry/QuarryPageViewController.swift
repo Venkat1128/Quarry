@@ -13,6 +13,7 @@ class QuarryPageViewController: UIViewController , UIPageViewControllerDataSourc
     var images = ["page1.png", "page2.png", "page3.png", "page4.png"];
     var count = 0
     var catTitleText : String?
+    var numberOfPages : [QuarryModelObject] = []
     var pageViewController = UIPageViewController()
     
     override func viewDidLoad() {
@@ -58,14 +59,15 @@ class QuarryPageViewController: UIViewController , UIPageViewControllerDataSourc
     }
     
     func viewControllerAtIndex(index : Int) -> QuarryPageContentViewController? {
-        if((self.pageTitles.count == 0) || (index >= self.pageTitles.count)) {
+        if((self.numberOfPages.count == 0) || (index >= self.numberOfPages.count)) {
             return nil
         }
         let pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageContentViewController") as! QuarryPageContentViewController
         
         pageContentViewController.imageName = self.images[index]
-        pageContentViewController.titleText = self.pageTitles[index]
+        pageContentViewController.titleText = self.numberOfPages[index].topicTitle
         pageContentViewController.pageIndex = index
+        pageContentViewController.detailText = self.numberOfPages[index].topicDetailText
         return pageContentViewController
     }
     
@@ -80,14 +82,14 @@ class QuarryPageViewController: UIViewController , UIPageViewControllerDataSourc
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         var index  = (viewController as! QuarryPageContentViewController).pageIndex
         index = index! + 1
-        if(index == self.pageTitles.count){
+        if(index == self.numberOfPages.count){
             return nil
         }
         return self.viewControllerAtIndex(index!)
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return pageTitles.count
+        return numberOfPages.count
     }
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0

@@ -9,8 +9,9 @@
 import UIKit
 
 class QuarryPageContentDetailViewController: UIViewController {
-
     @IBOutlet weak var detailTextView: UITextView!
+    var detailTextContent:String!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         let navBarColor = navigationController!.navigationBar
@@ -21,7 +22,7 @@ class QuarryPageContentDetailViewController: UIViewController {
             alpha:1.0)
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-       // detailTextView.text = "";
+        detailTextView.text = detailTextContent
         // Do any additional setup after loading the view.
     }
 
