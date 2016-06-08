@@ -31,7 +31,7 @@ class QuarryCollectionViewController: UICollectionViewController {
         
         // Do any additional setup after loading the view.
         self.dashBoardItems = ["Having a meeting ?","Building the relationship ?","Writing a proposal ?","Selling to the client ?","Coming soon ?","Coming soon ?"]
-        self.imageArry = ["meeting.png","challenge.png","proposal.png","meeting.png","proposal.png","challenge.png"];
+        self.imageArry = ["meeting.png","buildingrelationship.png","proposal.png","meeting.png","proposal.png","buildingrelationship.png"];
         let navBarColor = navigationController!.navigationBar
         navBarColor.barTintColor = UIColor(
             red:63.0/255.0,

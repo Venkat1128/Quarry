@@ -35,7 +35,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2Z-ef-Jxa">
-                                            <rect key="frame" x="6" y="5" width="48" height="35"/>
+                                            <rect key="frame" x="10" y="5" width="40" height="30"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -43,10 +43,10 @@
                                 <constraints>
                                     <constraint firstItem="6Nw-GQ-gzV" firstAttribute="leading" secondItem="M0T-2v-uaV" secondAttribute="leading" constant="5" id="3GC-eD-DLD"/>
                                     <constraint firstAttribute="trailing" secondItem="6Nw-GQ-gzV" secondAttribute="trailing" constant="5" id="3jp-8l-sq2"/>
-                                    <constraint firstItem="6Nw-GQ-gzV" firstAttribute="top" secondItem="N2Z-ef-Jxa" secondAttribute="bottom" id="QH4-5d-kXq"/>
+                                    <constraint firstItem="6Nw-GQ-gzV" firstAttribute="top" secondItem="N2Z-ef-Jxa" secondAttribute="bottom" constant="5" id="QH4-5d-kXq"/>
                                     <constraint firstAttribute="bottom" secondItem="6Nw-GQ-gzV" secondAttribute="bottom" constant="3.5" id="YfC-be-tUA"/>
-                                    <constraint firstItem="N2Z-ef-Jxa" firstAttribute="leading" secondItem="M0T-2v-uaV" secondAttribute="leading" constant="6" id="fDR-wE-duh"/>
-                                    <constraint firstItem="N2Z-ef-Jxa" firstAttribute="trailing" secondItem="M0T-2v-uaV" secondAttribute="trailingMargin" constant="2" id="gGZ-y0-fTq"/>
+                                    <constraint firstItem="N2Z-ef-Jxa" firstAttribute="leading" secondItem="M0T-2v-uaV" secondAttribute="leading" constant="10" id="fDR-wE-duh"/>
+                                    <constraint firstItem="N2Z-ef-Jxa" firstAttribute="trailing" secondItem="M0T-2v-uaV" secondAttribute="trailingMargin" constant="-2" id="gGZ-y0-fTq"/>
                                     <constraint firstItem="N2Z-ef-Jxa" firstAttribute="top" secondItem="M0T-2v-uaV" secondAttribute="top" constant="5" id="lp9-fe-WiY"/>
                                 </constraints>
                                 <size key="customSize" width="60" height="60"/>
