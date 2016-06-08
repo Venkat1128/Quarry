@@ -21,6 +21,9 @@ class QuarryPageContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.topicpptImage.image = UIImage(named: imageName)
+        self.topicpptImage.layer.borderColor = UIColor.brownColor().CGColor
+        self.topicpptImage.layer.borderWidth = 2
+        self.topicpptImage.layer.cornerRadius = 10
         self.titleLabel.text = self.titleText
         self.titleLabel.alpha = 0.1
         UIView.animateWithDuration(1.0, animations: { () -> Void in
@@ -50,6 +53,7 @@ class QuarryPageContentViewController: UIViewController {
     func tappedView(){
         let detailViewTextView = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
         detailViewTextView.detailTextContent = detailText
+        detailViewTextView.title = self.titleText
         let navController = UINavigationController(rootViewController: detailViewTextView)
         detailViewTextView.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done,target: self,action: #selector(QuarryPageContentViewController.dismiss))
         self.presentViewController(navController, animated: true, completion: nil)

@@ -10,7 +10,7 @@ import UIKit
 class QuarryPageViewController: UIViewController , UIPageViewControllerDataSource {
     
     let pageTitles = ["Title 1", "Title 2", "Title 3", "Title 4"]
-    var images = ["page1.png", "page2.png", "page3.png", "page4.png"];
+    var images = ["prepare.png", "introduction.png", "understanding.png", "credibility.png"];
     var count = 0
     var catTitleText : String?
     var numberOfPages : [QuarryModelObject] = []
