@@ -42,7 +42,8 @@ class QuarryCollectionViewController: UICollectionViewController {
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
-        let titleAttributes = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline), NSForegroundColorAttributeName: UIColor.purpleColor()]
+        let titleAttributes = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline), NSForegroundColorAttributeName: UIColor.blackColor()]
+       
        
         havinagAMeetingList.append(QuarryModelObject(topicTitle: "PREPARE", topicImageName: "prepare.png", topicDetailText:NSMutableAttributedString(string: "• Research\n\n• Personal biography\n\n• Organisation structure\n\n• Client strategic objectives\n\n• Decision network\n\n• Competitor presence\n\n• Pain points\n\n• Hypotheses on pain points\n\n• Script the meeting\n\n• Identify the what we finds\n\n• Understand the time agreement\n\n• Secretary’s name.", attributes: titleAttributes) )!)
         havinagAMeetingList.append(QuarryModelObject(topicTitle: "INTRODUCTION", topicImageName: "introduction.png", topicDetailText: NSMutableAttributedString(string:"• Ice breaker to relax client and be human Agree purpose, agenda and time commitment\n\n• Personal introduction to start the peer relationship\n\n• Outline our focus on their issues, confidentially\n\n• Firm introduction and the people we work with\n\n• Recognise our capability is broader than experienced\n\n• Pre-empt objections with content and WWFs.", attributes: titleAttributes) )!)
