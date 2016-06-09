@@ -9,8 +9,6 @@
 import UIKit
 class QuarryPageViewController: UIViewController , UIPageViewControllerDataSource {
     
-    let pageTitles = ["Title 1", "Title 2", "Title 3", "Title 4"]
-    var images = ["prepare.png", "introduction.png", "understanding.png", "credibility.png"];
     var count = 0
     var catTitleText : String?
     var numberOfPages : [QuarryModelObject] = []
@@ -64,7 +62,7 @@ class QuarryPageViewController: UIViewController , UIPageViewControllerDataSourc
         }
         let pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageContentViewController") as! QuarryPageContentViewController
         
-        pageContentViewController.imageName = self.images[index]
+        pageContentViewController.imageName = self.numberOfPages[index].topicImageName
         pageContentViewController.titleText = self.numberOfPages[index].topicTitle
         pageContentViewController.pageIndex = index
         pageContentViewController.detailText = self.numberOfPages[index].topicDetailText

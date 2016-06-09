@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07150A871D0963160027250D /* rova.png in Resources */ = {isa = PBXBuildFile; fileRef = 07150A861D0963160027250D /* rova.png */; };
 		0739C36C1CE63565003C95B4 /* QuarryPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0739C36B1CE63565003C95B4 /* QuarryPageContentViewController.swift */; };
 		075F056F1CD4C7A6006626FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F056E1CD4C7A6006626FA /* AppDelegate.swift */; };
 		075F05741CD4C7A6006626FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075F05721CD4C7A6006626FA /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07150A861D0963160027250D /* rova.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rova.png; sourceTree = "<group>"; };
 		0739C36B1CE63565003C95B4 /* QuarryPageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryPageContentViewController.swift; sourceTree = "<group>"; };
 		075F056B1CD4C7A5006626FA /* Quarry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quarry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		075F056E1CD4C7A6006626FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07150A851D0963160027250D /* BuildingaRelation */ = {
+			isa = PBXGroup;
+			children = (
+				07150A861D0963160027250D /* rova.png */,
+			);
+			path = BuildingaRelation;
+			sourceTree = "<group>";
+		};
 		075F05621CD4C7A5006626FA = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +162,7 @@
 		076A31F41CEF0E2F00A95407 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				07150A851D0963160027250D /* BuildingaRelation */,
 				07A2CC9A1D08CA5C00A25CD6 /* Meeting */,
 			);
 			name = Images;
@@ -275,6 +286,7 @@
 				07A2CCA21D08CAC700A25CD6 /* understanding.png in Resources */,
 				075F05791CD4C7A6006626FA /* LaunchScreen.storyboard in Resources */,
 				075F05761CD4C7A6006626FA /* Assets.xcassets in Resources */,
+				07150A871D0963160027250D /* rova.png in Resources */,
 				07A2CCA01D08CAC700A25CD6 /* introduction.png in Resources */,
 				075F05741CD4C7A6006626FA /* Main.storyboard in Resources */,
 				07A2CC9C1D08CA5C00A25CD6 /* credibility.png in Resources */,

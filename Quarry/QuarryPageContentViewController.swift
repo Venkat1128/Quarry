@@ -17,7 +17,7 @@ class QuarryPageContentViewController: UIViewController {
     var titleText : String!
     var imageName : String!
     let imageTapgeature = UITapGestureRecognizer()
-    var detailText : String!
+    var detailText : NSMutableAttributedString!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.topicpptImage.image = UIImage(named: imageName)

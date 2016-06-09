@@ -14,6 +14,7 @@ class QuarryCollectionViewController: UICollectionViewController {
     var imageArry = [String]()
     var pageCatTiteText : String = ""
     var havinagAMeetingList = [QuarryModelObject]()
+    var buildingaRelationship = [QuarryModelObject]()
     var quarryItemsDict : [String :[QuarryModelObject]] = [:]
     
     override func viewDidLoad() {
@@ -40,14 +41,19 @@ class QuarryCollectionViewController: UICollectionViewController {
             alpha:1.0)
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-
-        havinagAMeetingList.append(QuarryModelObject(topicTitle: "PREPARE", topicImageName: "prepare.png", topicDetailText: "• Research\n\n• Personal biography\n\n• Organisation structure\n\n• Client strategic objectives\n\n• Decision network\n\n• Competitor presence\n\n• Pain points\n\n• Hypotheses on pain points\n\n• Script the meeting\n\n• Identify the what we finds\n\n• Understand the time agreement\n\n• Secretary’s name.")!)
-        havinagAMeetingList.append(QuarryModelObject(topicTitle: "INTRODUCTION", topicImageName: "introduction.png", topicDetailText: "• Ice breaker to relax client and be human Agree purpose, agenda and time commitment\n\n• Personal introduction to start the peer relationship\n\n• Outline our focus on their issues, confidentially\n\n• Firm introduction and the people we work with\n\n• Recognise our capability is broader than experienced\n\n• Pre-empt objections with content and WWFs.")!)
-        havinagAMeetingList.append(QuarryModelObject(topicTitle: "UNDERSTANDING", topicImageName: "understanding.png", topicDetailText: "• Search for the pain – and the emotion / owner\n\n• Highlight need for acceleration / mobilisation\n\n• Share 2-3 what we finds around the issue\n\n• Introduce how we work collaboratively\n\n• Use repeated open questions to understand\n\n• Listen, listen, listen & probe for completeness\n\n• Demonstrate empathy & understand personal stak.")!)
-        havinagAMeetingList.append(QuarryModelObject(topicTitle: "CREDIBILITY", topicImageName: "credibility.png", topicDetailText: "• Where we have done it before, delivery results\n\n• Related issues to show true understanding\n\n• Use their language to show what we did and not how\n\n• Manage the emotional and political issues\n\n• Confirm issues and agree next steps\n\n• Schedule next meeting with homework for them\n\n• Take the next steps yourself for ownership.")!)
+        
+        let titleAttributes = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline), NSForegroundColorAttributeName: UIColor.purpleColor()]
+       
+        havinagAMeetingList.append(QuarryModelObject(topicTitle: "PREPARE", topicImageName: "prepare.png", topicDetailText:NSMutableAttributedString(string: "• Research\n\n• Personal biography\n\n• Organisation structure\n\n• Client strategic objectives\n\n• Decision network\n\n• Competitor presence\n\n• Pain points\n\n• Hypotheses on pain points\n\n• Script the meeting\n\n• Identify the what we finds\n\n• Understand the time agreement\n\n• Secretary’s name.", attributes: titleAttributes) )!)
+        havinagAMeetingList.append(QuarryModelObject(topicTitle: "INTRODUCTION", topicImageName: "introduction.png", topicDetailText: NSMutableAttributedString(string:"• Ice breaker to relax client and be human Agree purpose, agenda and time commitment\n\n• Personal introduction to start the peer relationship\n\n• Outline our focus on their issues, confidentially\n\n• Firm introduction and the people we work with\n\n• Recognise our capability is broader than experienced\n\n• Pre-empt objections with content and WWFs.", attributes: titleAttributes) )!)
+        havinagAMeetingList.append(QuarryModelObject(topicTitle: "UNDERSTANDING", topicImageName: "understanding.png", topicDetailText: NSMutableAttributedString(string:"• Search for the pain – and the emotion / owner\n\n• Highlight need for acceleration / mobilisation\n\n• Share 2-3 what we finds around the issue\n\n• Introduce how we work collaboratively\n\n• Use repeated open questions to understand\n\n• Listen, listen, listen & probe for completeness\n\n• Demonstrate empathy & understand personal stak.", attributes: titleAttributes) )!)
+        havinagAMeetingList.append(QuarryModelObject(topicTitle: "CREDIBILITY", topicImageName: "credibility.png", topicDetailText: NSMutableAttributedString(string:"• Where we have done it before, delivery results\n\n• Related issues to show true understanding\n\n• Use their language to show what we did and not how\n\n• Manage the emotional and political issues\n\n• Confirm issues and agree next steps\n\n• Schedule next meeting with homework for them\n\n• Take the next steps yourself for ownership.", attributes: titleAttributes) )!)
         quarryItemsDict[dashBoardItems[0]] = havinagAMeetingList
+        let myAttributedString = NSMutableAttributedString()
+        myAttributedString.appendAttributedString(NSAttributedString(string:"• Relationship: ensure you build upon your relationship with the client at every opportunity, show that you care through getting to know them.\n\n• Opportunity: this is a business relationship, so opportunities to work together should always be on the agenda, so look out for them and take note.\n\n• Value: always add value to the client on every encounter, however small. The client should leave the encounter richer.\n\n• Agreement: ensure that you make agreements however small or trivial and always follow through on the agreements.", attributes: titleAttributes))
+        buildingaRelationship.append(QuarryModelObject(topicTitle: "ROVA", topicImageName: "rova.png", topicDetailText:myAttributedString)!)
         
-        
+        quarryItemsDict[dashBoardItems[1]] = buildingaRelationship
     }
     
     override func didReceiveMemoryWarning() {
@@ -114,9 +120,18 @@ class QuarryCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
-        if (indexPath.row == 0) {
+        if (indexPath.row == 0 || indexPath.row == 1) {
             pageCatTiteText = dashBoardItems[indexPath.row]
             self.performSegueWithIdentifier("quarryPageSegue", sender: reuseIdentifier)
+        }else{
+            // create the alert
+            let alert = UIAlertController(title: "Quarry", message: "In Progress!", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            
+            // show the alert
+            self.presentViewController(alert, animated: true, completion: nil)
         }
      
     }
