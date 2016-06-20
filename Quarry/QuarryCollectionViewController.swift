@@ -15,6 +15,7 @@ class QuarryCollectionViewController: UICollectionViewController {
     var pageCatTiteText : String = ""
     var havinagAMeetingList = [QuarryModelObject]()
     var buildingaRelationship = [QuarryModelObject]()
+    var sellingToClient = [QuarryModelObject]()
     var quarryItemsDict : [String :[QuarryModelObject]] = [:]
     
     override func viewDidLoad() {
@@ -31,8 +32,8 @@ class QuarryCollectionViewController: UICollectionViewController {
         self.collectionView?.delegate = self;
         
         // Do any additional setup after loading the view.
-        self.dashBoardItems = ["Having a meeting ?","Building the relationship ?","Writing a proposal ?","Selling to the client ?","Coming soon ?","Coming soon ?"]
-        self.imageArry = ["meeting.png","buildingrelationship.png","proposal.png","sellingtoclient.png","comingsoon1.png","comingsoon2.png"];
+        self.dashBoardItems = ["Having a meeting ?","Building the relationship ?","Selling to the client ?","Writing a proposal ?","Coming soon ?","Coming soon ?"]
+        self.imageArry = ["meeting.png","buildingrelationship.png","sellingtoclient.png","proposal.png","comingsoon1.png","comingsoon2.png"];
         let navBarColor = navigationController!.navigationBar
         navBarColor.barTintColor = UIColor(
             red:63.0/255.0,
@@ -42,19 +43,69 @@ class QuarryCollectionViewController: UICollectionViewController {
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
-        let titleAttributes = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleBody), NSForegroundColorAttributeName: UIColor.blackColor()]
-       
-       
-        havinagAMeetingList.append(QuarryModelObject(topicTitle: "PREPARE", topicImageName: "prepare.png", topicDetailText:NSMutableAttributedString(string: "• Research\n\n• Personal biography\n\n• Organisation structure\n\n• Client strategic objectives\n\n• Decision network\n\n• Competitor presence\n\n• Pain points\n\n• Hypotheses on pain points\n\n• Script the meeting\n\n• Identify the what we finds\n\n• Understand the time agreement\n\n• Secretary’s name.", attributes: titleAttributes) )!)
-        havinagAMeetingList.append(QuarryModelObject(topicTitle: "INTRODUCTION", topicImageName: "introduction.png", topicDetailText: NSMutableAttributedString(string:"• Ice breaker to relax client and be human Agree purpose, agenda and time commitment\n\n• Personal introduction to start the peer relationship\n\n• Outline our focus on their issues, confidentially\n\n• Firm introduction and the people we work with\n\n• Recognise our capability is broader than experienced\n\n• Pre-empt objections with content and WWFs.", attributes: titleAttributes) )!)
-        havinagAMeetingList.append(QuarryModelObject(topicTitle: "UNDERSTANDING", topicImageName: "understanding.png", topicDetailText: NSMutableAttributedString(string:"• Search for the pain – and the emotion / owner\n\n• Highlight need for acceleration / mobilisation\n\n• Share 2-3 what we finds around the issue\n\n• Introduce how we work collaboratively\n\n• Use repeated open questions to understand\n\n• Listen, listen, listen & probe for completeness\n\n• Demonstrate empathy & understand personal stak.", attributes: titleAttributes) )!)
-        havinagAMeetingList.append(QuarryModelObject(topicTitle: "CREDIBILITY", topicImageName: "credibility.png", topicDetailText: NSMutableAttributedString(string:"• Where we have done it before, delivery results\n\n• Related issues to show true understanding\n\n• Use their language to show what we did and not how\n\n• Manage the emotional and political issues\n\n• Confirm issues and agree next steps\n\n• Schedule next meeting with homework for them\n\n• Take the next steps yourself for ownership.", attributes: titleAttributes) )!)
-        quarryItemsDict[dashBoardItems[0]] = havinagAMeetingList
-        let myAttributedString = NSMutableAttributedString()
-        myAttributedString.appendAttributedString(NSAttributedString(string:"• Relationship: ensure you build upon your relationship with the client at every opportunity, show that you care through getting to know them.\n\n• Opportunity: this is a business relationship, so opportunities to work together should always be on the agenda, so look out for them and take note.\n\n• Value: always add value to the client on every encounter, however small. The client should leave the encounter richer.\n\n• Agreement: ensure that you make agreements however small or trivial and always follow through on the agreements.", attributes: titleAttributes))
-        buildingaRelationship.append(QuarryModelObject(topicTitle: "ROVA", topicImageName: "rova.png", topicDetailText:myAttributedString)!)
+        let titleAttributes = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleTitle2), NSForegroundColorAttributeName: UIColor.blackColor()]
+        let bodyAttributes = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleBody), NSForegroundColorAttributeName: UIColor.blackColor()]
+        // Having a client
+        let myAttributedMeetingString = NSMutableAttributedString()
         
+        myAttributedMeetingString.appendAttributedString(NSAttributedString(string:"PREPARE: \n\n",attributes:titleAttributes ))
+        myAttributedMeetingString.appendAttributedString(NSAttributedString(string:"• Research\n\n• Personal biography\n\n• Organisation structure\n\n• Client strategic objectives\n\n• Decision network\n\n• Competitor presence\n\n• Pain points\n\n• Hypotheses on pain points\n\n• Script the meeting\n\n• Identify the what we finds\n\n• Understand the time agreement\n\n• Secretary’s name.\n\n", attributes: bodyAttributes))
+        myAttributedMeetingString.appendAttributedString(NSAttributedString(string:"INTRODUCTION: \n\n",attributes:titleAttributes ))
+        myAttributedMeetingString.appendAttributedString(NSAttributedString(string:"• Ice breaker to relax client and be human Agree purpose, agenda and time commitment\n\n• Personal introduction to start the peer relationship\n\n• Outline our focus on their issues, confidentially\n\n• Firm introduction and the people we work with\n\n• Recognise our capability is broader than experienced\n\n• Pre-empt objections with content and WWFs.\n\n",attributes:bodyAttributes ))
+        myAttributedMeetingString.appendAttributedString(NSAttributedString(string:"UNDERSTANDING: \n\n",attributes:titleAttributes ))
+        myAttributedMeetingString.appendAttributedString(NSAttributedString(string:"• Search for the pain – and the emotion / owner\n\n• Highlight need for acceleration / mobilisation\n\n• Share 2-3 what we finds around the issue\n\n• Introduce how we work collaboratively\n\n• Use repeated open questions to understand\n\n• Listen, listen, listen & probe for completeness\n\n• Demonstrate empathy & understand personal stak.\n\n",attributes:bodyAttributes ))
+        
+        myAttributedMeetingString.appendAttributedString(NSAttributedString(string:"CREDIBILITY: \n\n",attributes:titleAttributes ))
+        myAttributedMeetingString.appendAttributedString(NSAttributedString(string:"• Where we have done it before, delivery results\n\n• Related issues to show true understanding\n\n• Use their language to show what we did and not how\n\n• Manage the emotional and political issues\n\n• Confirm issues and agree next steps\n\n• Schedule next meeting with homework for them\n\n• Take the next steps yourself for ownership.",attributes:bodyAttributes ))
+        
+        havinagAMeetingList.append(QuarryModelObject(topicTitle: "PREPARE", topicImageName: "prepare.png", topicDetailText:myAttributedMeetingString)!)
+   
+        quarryItemsDict[dashBoardItems[0]] = havinagAMeetingList
+        // Building a Relationship
+        let myAttributedROVAString = NSMutableAttributedString()
+        //ROVA -   Building Client relationship
+        myAttributedROVAString.appendAttributedString(NSAttributedString(string:"• Relationship: ",attributes:titleAttributes ))
+        myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Ensure you build upon your relationship with the client at every opportunity, show that you care through getting to know them.\n\n", attributes: bodyAttributes))
+        myAttributedROVAString.appendAttributedString(NSAttributedString(string:"• Opportunity: ",attributes:titleAttributes ))
+        myAttributedROVAString.appendAttributedString(NSAttributedString(string:"This is a business relationship, so opportunities to work together should always be on the agenda, so look out for them and take note.\n\n",attributes:bodyAttributes ))
+        myAttributedROVAString.appendAttributedString(NSAttributedString(string:"• Value: ",attributes:titleAttributes ))
+        myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Always add value to the client on every encounter, however small. The client should leave the encounter richer.\n\n",attributes:bodyAttributes ))
+        
+        myAttributedROVAString.appendAttributedString(NSAttributedString(string:"• Agreement: ",attributes:titleAttributes ))
+        myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Ensure that you make agreements however small or trivial and always follow through on the agreements.",attributes:bodyAttributes ))
+        
+        buildingaRelationship.append(QuarryModelObject(topicTitle: "ROVA", topicImageName: "rova.png", topicDetailText:myAttributedROVAString)!)
+        //PKAE 
+        let myAttributedPKASString  = NSMutableAttributedString()
+        myAttributedPKASString.appendAttributedString(NSAttributedString(string:"Presentation: \n\n",attributes:titleAttributes ))
+        myAttributedPKASString.appendAttributedString(NSAttributedString(string:"• Organised & timely\n\n• Use their language and speech\n\n• Professional courtesy\n\n• Listening skills\n\n• Emotional rapport.\n\n", attributes: bodyAttributes))
+        
+        myAttributedPKASString.appendAttributedString(NSAttributedString(string:"Knowledge: \n\n",attributes:titleAttributes ))
+        myAttributedPKASString.appendAttributedString(NSAttributedString(string:"• Business understanding\n\n• Approaches and insight\n\n• Technical expertise\n\n• Organisational knowledge\n\n",attributes:bodyAttributes ))
+        
+        myAttributedPKASString.appendAttributedString(NSAttributedString(string:"Associations: \n\n",attributes:titleAttributes ))
+        myAttributedPKASString.appendAttributedString(NSAttributedString(string:"• People you know\n\n• References given\n\n• Allies in the organisation\n\n",attributes:bodyAttributes ))
+        
+        myAttributedPKASString.appendAttributedString(NSAttributedString(string:"Experience: \n\n",attributes:titleAttributes ))
+        myAttributedPKASString.appendAttributedString(NSAttributedString(string:"• Personal track record\n\n• Relevant credentials\n\n• What you have done\n\n• Other credentials",attributes:bodyAttributes ))
+        
+        buildingaRelationship.append(QuarryModelObject(topicTitle: "PKAS", topicImageName: "rova.png", topicDetailText:myAttributedPKASString)!)
         quarryItemsDict[dashBoardItems[1]] = buildingaRelationship
+        
+        // Selling to Client
+        //Desired Business Results
+        let myAttributedDBRString  = NSMutableAttributedString()
+        myAttributedDBRString.appendAttributedString(NSAttributedString(string:"Desired Business Results: \n\n",attributes:titleAttributes ))
+        myAttributedDBRString.appendAttributedString(NSAttributedString(string:"• Use external research\n\n• Directly relevant to their issue\n\n• Value based discussions\n\n• Measurable benefits and results\n\n• Financially attractive\n\n• Logical and rational structure\n\n• Focus on business improvement\n\n• Frame a solution to their problem", attributes: bodyAttributes))
+         sellingToClient.append(QuarryModelObject(topicTitle: "Desired Business Results", topicImageName: "rova.png", topicDetailText:myAttributedDBRString)!)
+        //Desired Personal Gains
+         let myAttributedDPGString  = NSMutableAttributedString()
+        myAttributedDPGString.appendAttributedString(NSAttributedString(string:"Desired Personal Gains: \n\n",attributes:titleAttributes ))
+        myAttributedDPGString.appendAttributedString(NSAttributedString(string:"• Based on personal agenda\n\n• Make it memorable to them\n\n• Visualise the end with them in it\n\n• Unfreeze the individual from status quo\n\n• Show the journey and change\n\n• Never judge, deny or assume their emotions\n\n• Review: safety, affirmation, power, recognition, achievement, avoid",attributes:bodyAttributes ))
+        
+        
+        sellingToClient.append(QuarryModelObject(topicTitle: "Desired Personal Gains", topicImageName: "rova.png", topicDetailText:myAttributedDPGString)!)
+        quarryItemsDict[dashBoardItems[2]] = sellingToClient
     }
     
     override func didReceiveMemoryWarning() {
@@ -121,7 +172,7 @@ class QuarryCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
-        if (indexPath.row == 0 || indexPath.row == 1) {
+        if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2) {
             pageCatTiteText = dashBoardItems[indexPath.row]
             self.performSegueWithIdentifier("quarryPageSegue", sender: reuseIdentifier)
         }else{

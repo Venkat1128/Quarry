@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuarryPageContentDetailViewController: UIViewController {
+class QuarryPageContentDetailViewController: UIViewController,UITextViewDelegate {
     @IBOutlet weak var detailTextView: UITextView!
     var detailTextContent:NSMutableAttributedString!
    
@@ -23,11 +23,12 @@ class QuarryPageContentDetailViewController: UIViewController {
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         detailTextView.attributedText = detailTextContent
-        
+        self.detailTextView.delegate = self
         detailTextView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).CGColor
         detailTextView.layer.borderWidth = 1.0
         detailTextView.layer.cornerRadius = 10
         detailTextView.backgroundColor = UIColor.clearColor()
+        
        // detailTextView.textColor = UIColor.blackColor()//UIColor(red: 171/255, green: 49/255, blue: 30/255, alpha: 1.0)
         // Do any additional setup after loading the view.
     }
@@ -37,7 +38,11 @@ class QuarryPageContentDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func textViewDidBeginEditing(textView: UITextView) {
+        dispatch_async(dispatch_get_main_queue(), {
+            textView.selectedRange = NSMakeRange(0, 0)
+        })
+    }
     /*
     // MARK: - Navigation
 
