@@ -38,10 +38,10 @@ class QuarryPageContentDetailViewController: UIViewController,UITextViewDelegate
         // Dispose of any resources that can be recreated.
     }
     
-    func textViewDidBeginEditing(textView: UITextView) {
-        dispatch_async(dispatch_get_main_queue(), {
-            textView.selectedRange = NSMakeRange(0, 0)
-        })
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        detailTextView.setContentOffset(CGPointZero, animated: false)
     }
     /*
     // MARK: - Navigation
