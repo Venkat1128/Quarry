@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ILO-ju-uil">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ILO-ju-uil">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -30,7 +30,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nw-GQ-gzV">
                                             <rect key="frame" x="5" y="40" width="50" height="17"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -117,6 +117,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHr-Pb-LJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2454" y="69"/>
+        </scene>
+        <!--Quarry Detail View Controller-->
+        <scene sceneID="SjA-Uz-PKF">
+            <objects>
+                <viewController storyboardIdentifier="QuarryDetailViewController" id="7MH-be-soW" customClass="QuarryDetailViewController" customModule="Quarry" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qBo-su-6Se"/>
+                        <viewControllerLayoutGuide type="bottom" id="OBE-zi-CwG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5cd-LP-mhR">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="FK9-Xu-GWx"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJ0-L4-wnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4082" y="692"/>
         </scene>
         <!--Quarry Page Content View Controller-->
         <scene sceneID="Euk-aY-Rls">
@@ -209,7 +231,7 @@ We emphasise local accountability and use a flexible mix of global delivery reso
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBX-Qb-Lxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2231" y="759"/>
+            <point key="canvasLocation" x="1824" y="744"/>
         </scene>
         <!--Quarry-->
         <scene sceneID="4v2-GN-i4q">
@@ -228,6 +250,25 @@ We emphasise local accountability and use a flexible mix of global delivery reso
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9v-ek-7kH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="277" y="98"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TTU-4u-vjw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AUr-LN-OEs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aDo-la-LR2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7MH-be-soW" kind="relationship" relationship="rootViewController" id="TEC-ez-Zmu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSW-Ii-Px5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3268" y="682"/>
         </scene>
     </scenes>
 </document>

@@ -33,6 +33,7 @@ class QuarryPageContentViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(QuarryPageContentViewController.tappedView))
         topicpptImage.addGestureRecognizer(tap)
         topicpptImage.userInteractionEnabled = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,11 +52,13 @@ class QuarryPageContentViewController: UIViewController {
     }
     */
     func tappedView(){
-        let detailViewTextView = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
-        detailViewTextView.detailTextContent = detailText
-        detailViewTextView.title = self.titleText
-        let navController = UINavigationController(rootViewController: detailViewTextView)
-        detailViewTextView.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done,target: self,action: #selector(QuarryPageContentViewController.dismiss))
+       // let detailViewTextView = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
+        let detailViewPageMenu = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryDetailViewController") as! QuarryDetailViewController
+       // let detailViewPageMenu : QuarryDetailViewController = QuarryDetailViewController(nibName: "QuarryDetailViewController",bundle: nil)
+        detailViewPageMenu.detailText = detailText
+        detailViewPageMenu.title = self.titleText
+        let navController = UINavigationController(rootViewController: detailViewPageMenu)
+        detailViewPageMenu.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done,target: self,action: #selector(QuarryPageContentViewController.dismiss))
         self.presentViewController(navController, animated: true, completion: nil)
     }
     func dismiss(){
