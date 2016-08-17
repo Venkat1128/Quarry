@@ -17,18 +17,13 @@ class QuarryPageContentViewController: UIViewController {
     var titleText : String!
     var imageName : String!
     let imageTapgeature = UITapGestureRecognizer()
-    var detailText : NSMutableAttributedString!
+    var detailText : String!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.topicpptImage.image = UIImage(named: imageName)
         self.topicpptImage.layer.borderColor = UIColor.brownColor().CGColor
         self.topicpptImage.layer.borderWidth = 2
         self.topicpptImage.layer.cornerRadius = 10
-        self.titleLabel.text = self.titleText
-        self.titleLabel.alpha = 0.1
-        UIView.animateWithDuration(1.0, animations: { () -> Void in
-            self.titleLabel.alpha = 1.0
-        })
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(QuarryPageContentViewController.tappedView))
         topicpptImage.addGestureRecognizer(tap)

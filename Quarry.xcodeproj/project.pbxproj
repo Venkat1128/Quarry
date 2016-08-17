@@ -27,8 +27,6 @@
 		07BE2A941D1D6C0F001F39E3 /* dpg.png in Resources */ = {isa = PBXBuildFile; fileRef = 07BE2A921D1D6C0F001F39E3 /* dpg.png */; };
 		07DAAD661D5B75EF00058884 /* QuarryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DAAD641D5B75EF00058884 /* QuarryDetailViewController.swift */; };
 		07DAAD6A1D5B769B00058884 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DAAD691D5B769B00058884 /* CAPSPageMenu.swift */; };
-		07DAAD6D1D5B7C6E00058884 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DAAD6B1D5B7C6E00058884 /* TestViewController.swift */; };
-		07DAAD6E1D5B7C6E00058884 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07DAAD6C1D5B7C6E00058884 /* TestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +73,6 @@
 		07BE2A921D1D6C0F001F39E3 /* dpg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpg.png; sourceTree = "<group>"; };
 		07DAAD641D5B75EF00058884 /* QuarryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuarryDetailViewController.swift; sourceTree = "<group>"; };
 		07DAAD691D5B769B00058884 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
-		07DAAD6B1D5B7C6E00058884 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		07DAAD6C1D5B7C6E00058884 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,8 +216,6 @@
 			children = (
 				076B899F1CF34D1A001FE9CD /* QuarryPageContentDetailViewController.swift */,
 				07DAAD641D5B75EF00058884 /* QuarryDetailViewController.swift */,
-				07DAAD6B1D5B7C6E00058884 /* TestViewController.swift */,
-				07DAAD6C1D5B7C6E00058884 /* TestViewController.xib */,
 			);
 			name = DetailsView;
 			sourceTree = "<group>";
@@ -341,7 +335,6 @@
 				07BE2A941D1D6C0F001F39E3 /* dpg.png in Resources */,
 				075F05791CD4C7A6006626FA /* LaunchScreen.storyboard in Resources */,
 				075F05761CD4C7A6006626FA /* Assets.xcassets in Resources */,
-				07DAAD6E1D5B7C6E00058884 /* TestViewController.xib in Resources */,
 				07BE2A931D1D6C0F001F39E3 /* dbr.png in Resources */,
 				07BE2A8F1D1D6BFB001F39E3 /* pkae.png in Resources */,
 				07BE2A8D1D1D6BF2001F39E3 /* piuc.png in Resources */,
@@ -372,7 +365,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07DAAD6D1D5B7C6E00058884 /* TestViewController.swift in Sources */,
 				075F05A51CD55516006626FA /* QuarryCollectionViewCell.swift in Sources */,
 				076A31F31CEE157800A95407 /* QuarryPageViewController.swift in Sources */,
 				07DAAD661D5B75EF00058884 /* QuarryDetailViewController.swift in Sources */,

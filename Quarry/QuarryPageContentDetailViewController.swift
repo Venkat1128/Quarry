@@ -14,14 +14,14 @@ class QuarryPageContentDetailViewController: UIViewController,UITextViewDelegate
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navBarColor = navigationController!.navigationBar
+       /* let navBarColor = navigationController!.navigationBar
         navBarColor.barTintColor = UIColor(
             red:63.0/255.0,
             green:108.0/255.0,
             blue:175.0/255.0,
             alpha:1.0)
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()*/
         detailTextView.attributedText = detailTextContent
         self.detailTextView.delegate = self
         detailTextView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).CGColor

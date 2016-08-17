@@ -11,13 +11,13 @@ import UIKit
 class QuarryModelObject: NSObject {
     var topicTitle : String
     var topicImageName : String
-    var topicDetailText : NSMutableAttributedString
+    var topicDetailText : String
 
-    init?(topicTitle : String,topicImageName : String,topicDetailText : NSMutableAttributedString) {
+    init?(topicTitle : String,topicImageName : String,topicDetailText : String) {
         self.topicTitle = topicTitle
         self.topicImageName = topicImageName
         self.topicDetailText = topicDetailText
-        if topicTitle.isEmpty || topicImageName.isEmpty || topicDetailText.string.isEmpty {
+        if topicTitle.isEmpty || topicImageName.isEmpty || topicDetailText.isEmpty {
             return nil
         }
     }

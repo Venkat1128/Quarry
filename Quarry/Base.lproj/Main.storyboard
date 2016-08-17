@@ -152,30 +152,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixY-EK-xeO">
-                                <rect key="frame" x="20" y="28" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uag-j0-oKR">
-                                <rect key="frame" x="20" y="73" width="560" height="519"/>
+                                <rect key="frame" x="20" y="44" width="560" height="548"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ixY-EK-xeO" secondAttribute="trailing" constant="20" id="8qk-BI-NUa"/>
                             <constraint firstItem="sqi-GO-mgb" firstAttribute="top" secondItem="Uag-j0-oKR" secondAttribute="bottom" constant="8" id="RO5-e6-0iM"/>
                             <constraint firstItem="Uag-j0-oKR" firstAttribute="leading" secondItem="tPE-i1-7GD" secondAttribute="leading" constant="20" id="SrO-7k-Y1U"/>
-                            <constraint firstItem="Uag-j0-oKR" firstAttribute="top" secondItem="ixY-EK-xeO" secondAttribute="bottom" constant="24" id="fYu-ob-xzJ"/>
-                            <constraint firstItem="ixY-EK-xeO" firstAttribute="top" secondItem="xb1-4d-gO1" secondAttribute="bottom" constant="8" id="smu-5d-Zu3"/>
+                            <constraint firstItem="Uag-j0-oKR" firstAttribute="top" secondItem="xb1-4d-gO1" secondAttribute="bottom" constant="24" id="dso-lW-Mxc"/>
                             <constraint firstAttribute="trailing" secondItem="Uag-j0-oKR" secondAttribute="trailing" constant="20" id="u5Y-Ki-5uX"/>
-                            <constraint firstItem="ixY-EK-xeO" firstAttribute="leading" secondItem="tPE-i1-7GD" secondAttribute="leading" constant="20" id="v7m-Nj-RV6"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="titleLabel" destination="ixY-EK-xeO" id="Ltz-Zm-nt0"/>
                         <outlet property="topicpptImage" destination="Uag-j0-oKR" id="30N-LV-kID"/>
                     </connections>
                 </viewController>
