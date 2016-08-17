@@ -32,34 +32,26 @@ class QuarryCollectionViewController: UICollectionViewController {
         self.collectionView?.delegate = self;
         
         // Do any additional setup after loading the view.
-        self.dashBoardItems = ["Having a meeting ?","Building the relationship ?","Selling to the client ?","Writing a proposal ?","Coming soon ?","Coming soon ?"]
-        self.imageArry = ["meeting.png","buildingrelationship.png","sellingtoclient.png","proposal.png","comingsoon1.png","comingsoon2.png"];
+        self.dashBoardItems = ["Have a meeting","Build a relation","Sell to the client","Write a proposal","Coming soon","Coming soon"]
+        self.imageArry = ["buildingrelationship.png","meeting.png","sellingtoclient.png","proposal.png","comingsoon1.png","comingsoon2.png"];
         let navBarColor = navigationController!.navigationBar
-        navBarColor.barTintColor = UIColor(
-            red:63.0/255.0,
-            green:108.0/255.0,
-            blue:175.0/255.0,
-            alpha:1.0)
+        navBarColor.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
-        let titleAttributes = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleTitle2), NSForegroundColorAttributeName: UIColor.blackColor()]
-               // Having a client
-        let myAttributedMeetingString = NSMutableAttributedString()
+        // Having a client
         
-        myAttributedMeetingString.appendAttributedString(NSAttributedString(string:"Having a meeting",attributes:titleAttributes ))
-        
-        havinagAMeetingList.append(QuarryModelObject(topicTitle: "Having a meeting", topicImageName: "piuc.png", topicDetailText:"Having a meeting")!)
+        havinagAMeetingList.append(QuarryModelObject(topicTitle: "Have a meeting", topicImageName: "piuc.png", topicDetailText:"Have a meeting")!)
    
         quarryItemsDict[dashBoardItems[0]] = havinagAMeetingList
         // Building a Relationship
         
         //ROVA -   Building Client relationship
         
-        buildingaRelationship.append(QuarryModelObject(topicTitle: "Building the relationship", topicImageName: "rova.png", topicDetailText:"ROVA")!)
+        buildingaRelationship.append(QuarryModelObject(topicTitle: "Build a relation", topicImageName: "rova.png", topicDetailText:"ROVA")!)
         //PKAE 
         
-        buildingaRelationship.append(QuarryModelObject(topicTitle: "Building the relationship", topicImageName: "pkae.png", topicDetailText:"PKAE")!)
+        buildingaRelationship.append(QuarryModelObject(topicTitle: "Build a relation", topicImageName: "pkae.png", topicDetailText:"PKAE")!)
         quarryItemsDict[dashBoardItems[1]] = buildingaRelationship
         
         // Selling to Client

@@ -185,8 +185,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SA-O0-5nE">
+                                <rect key="frame" x="20" y="40" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-kd-ISm">
-                                <rect key="frame" x="20" y="40" width="560" height="540"/>
+                                <rect key="frame" x="20" y="61" width="560" height="519"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">The telecommunications market is undergoing an unprecedented degree of change. The technology advancements in fiber and 3G LTE, and the increasing popularity of MVNOs and MTM are dramatically changing the way consumers engage with telecommunications providers. The expectation of the consumer and the variety of the technology choices pose increasing challenges to traditional and new players alike.
 With our parent company, NTT, operating as the largest global telecommunication organisation in the world, NTT DATA is uniquely placed to understand the pressures and challenges of your sector and offers specific solutions for governing and monitoring its key processes.
@@ -208,15 +214,24 @@ We emphasise local accountability and use a flexible mix of global delivery reso
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="RLw-kd-ISm" firstAttribute="top" secondItem="8SA-O0-5nE" secondAttribute="bottom" id="2Rk-IL-27W"/>
+                            <constraint firstItem="8SA-O0-5nE" firstAttribute="top" secondItem="fsT-sL-lhd" secondAttribute="bottom" constant="20" id="X7P-jv-Axs"/>
+                            <constraint firstItem="RLw-kd-ISm" firstAttribute="leading" secondItem="I6e-S7-BdA" secondAttribute="leading" constant="20" id="YG0-Kp-Jc8"/>
                             <constraint firstAttribute="trailing" secondItem="RLw-kd-ISm" secondAttribute="trailing" constant="20" id="cEx-ng-9KB"/>
-                            <constraint firstItem="RLw-kd-ISm" firstAttribute="top" secondItem="fsT-sL-lhd" secondAttribute="bottom" constant="20" id="hlj-WX-Idw"/>
+                            <constraint firstItem="RLw-kd-ISm" firstAttribute="top" secondItem="8SA-O0-5nE" secondAttribute="bottom" id="e7I-wK-nGK"/>
+                            <constraint firstItem="8SA-O0-5nE" firstAttribute="leading" secondItem="I6e-S7-BdA" secondAttribute="leading" constant="20" id="gsy-mm-Gqg"/>
+                            <constraint firstItem="RLw-kd-ISm" firstAttribute="top" secondItem="fsT-sL-lhd" secondAttribute="bottom" constant="41" id="hlj-WX-Idw"/>
                             <constraint firstItem="5Ks-bq-k60" firstAttribute="top" secondItem="RLw-kd-ISm" secondAttribute="bottom" constant="20" id="iCt-8z-aeo"/>
                             <constraint firstItem="RLw-kd-ISm" firstAttribute="leading" secondItem="I6e-S7-BdA" secondAttribute="leading" constant="20" id="kGj-92-wPH"/>
+                            <constraint firstAttribute="trailing" secondItem="RLw-kd-ISm" secondAttribute="trailing" constant="20" id="kbH-if-H7T"/>
+                            <constraint firstItem="5Ks-bq-k60" firstAttribute="top" secondItem="RLw-kd-ISm" secondAttribute="bottom" constant="20" id="ptl-K5-ax2"/>
+                            <constraint firstAttribute="trailing" secondItem="8SA-O0-5nE" secondAttribute="trailing" constant="20" id="xBM-uN-uuE"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="detailTextView" destination="RLw-kd-ISm" id="gNQ-3h-MA4"/>
+                        <outlet property="titleLabel" destination="8SA-O0-5nE" id="m9i-Qb-AMX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBX-Qb-Lxk" userLabel="First Responder" sceneMemberID="firstResponder"/>

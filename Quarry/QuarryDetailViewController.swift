@@ -37,13 +37,13 @@ class QuarryDetailViewController: UIViewController {
             .MenuItemWidth(90),
             .CenterMenuItems(true)
         ]
-        if self.title == "Having a meeting" {
+        if self.title == "Have a meeting" {
             parameters = [
                 .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
                 .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
                 .SelectionIndicatorColor(UIColor.orangeColor()),
                 .BottomMenuHairlineColor(UIColor(red: 70.0/255.0, green: 70.0/255.0, blue: 80.0/255.0, alpha: 1.0)),
-                .MenuItemFont(UIFont(name: "HelveticaNeue", size: 13.0)!),
+                .MenuItemFont(UIFont(name: "HelveticaNeue", size: 15.0)!),
                 .MenuHeight(40.0),
                 .MenuItemWidth(120),
                 .CenterMenuItems(true)
@@ -54,6 +54,7 @@ class QuarryDetailViewController: UIViewController {
             
             myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"• Research\n\n• Personal biography\n\n• Organisation structure\n\n• Client strategic objectives\n\n• Decision network\n\n• Competitor presence\n\n• Pain points\n\n• Hypotheses on pain points\n\n• Script the meeting\n\n• Identify the what we finds\n\n• Understand the time agreement\n\n• Secretary’s name.\n\n", attributes: bodyAttributes))
             controller1.title = "PREPARE"
+            //controller1.titleLabel.text = "PREPARE"
             controller1.detailTextContent = myAttributedMeetingString1;
             controllerArray.append(controller1)
             
@@ -79,7 +80,7 @@ class QuarryDetailViewController: UIViewController {
             controller4.detailTextContent = myAttributedMeetingString4
             controllerArray.append(controller4)
             
-        }else if self.title == "Building the relationship"{
+        }else if self.title == "Build a relation"{
             if self.detailText == "ROVA" {
                 let controller1 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
                 
