@@ -21,7 +21,7 @@ class QuarryPageContentDetailViewController: UIViewController,UITextViewDelegate
         detailTextView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).CGColor
         detailTextView.layer.borderWidth = 1.0
         detailTextView.layer.cornerRadius = 10
-        detailTextView.backgroundColor = UIColor.clearColor()
+       // detailTextView.backgroundColor = UIColor.clearColor()
         
        // detailTextView.textColor = UIColor.blackColor()//UIColor(red: 171/255, green: 49/255, blue: 30/255, alpha: 1.0)
         // Do any additional setup after loading the view.

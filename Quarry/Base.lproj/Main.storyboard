@@ -193,7 +193,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-kd-ISm">
                                 <rect key="frame" x="20" y="61" width="560" height="519"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">The telecommunications market is undergoing an unprecedented degree of change. The technology advancements in fiber and 3G LTE, and the increasing popularity of MVNOs and MTM are dramatically changing the way consumers engage with telecommunications providers. The expectation of the consumer and the variety of the technology choices pose increasing challenges to traditional and new players alike.
 With our parent company, NTT, operating as the largest global telecommunication organisation in the world, NTT DATA is uniquely placed to understand the pressures and challenges of your sector and offers specific solutions for governing and monitoring its key processes.
 Why NTT DATA?

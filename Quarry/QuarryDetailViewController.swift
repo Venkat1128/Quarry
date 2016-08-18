@@ -21,6 +21,7 @@ class QuarryDetailViewController: UIViewController {
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
+         let titleAttributes = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleTitle2), NSForegroundColorAttributeName: UIColor.blackColor()]
         
         let bodyAttributes = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleBody), NSForegroundColorAttributeName: UIColor.blackColor()]
         
@@ -82,34 +83,28 @@ class QuarryDetailViewController: UIViewController {
             
         }else if self.title == "Build a relation"{
             if self.detailText == "ROVA" {
+                
+                let myAttributedROVAString = NSMutableAttributedString()
+                //ROVA -   Building Client relationship
+                myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Relationship: ",attributes:titleAttributes ))
+                myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Ensure you build upon your relationship with the client at every opportunity, show that you care through getting to know them.\n\n", attributes: bodyAttributes))
+                myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Opportunity: ",attributes:titleAttributes ))
+                myAttributedROVAString.appendAttributedString(NSAttributedString(string:"This is a business relationship, so opportunities to work together should always be on the agenda, so look out for them and take note.\n\n",attributes:bodyAttributes ))
+                myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Value: ",attributes:titleAttributes ))
+                myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Always add value to the client on every encounter, however small. The client should leave the encounter richer.\n\n",attributes:bodyAttributes ))
+                
+                myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Agreement: ",attributes:titleAttributes ))
+                myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Ensure that you make agreements however small or trivial and always follow through on the agreements.",attributes:bodyAttributes ))
+                
+                
+                
                 let controller1 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
                 
-                let myAttributedMeetingString1 = NSMutableAttributedString()
-                
-                myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"Ensure you build upon your relationship with the client at every opportunity, show that you care through getting to know them.\n\n", attributes: bodyAttributes))
-                controller1.title = "Relationship"
-                controller1.detailTextContent = myAttributedMeetingString1;
+                controller1.title = "Build a relation"
+                controller1.detailTextContent = myAttributedROVAString;
                 controllerArray.append(controller1)
                 
-                let controller2 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
-                let myAttributedMeetingString2 = NSMutableAttributedString()
-                myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"This is a business relationship, so opportunities to work together should always be on the agenda, so look out for them and take note.\n\n",attributes:bodyAttributes ))
-                controller2.title = "Opportunity"
-                controller2.detailTextContent = myAttributedMeetingString2
-                controllerArray.append(controller2)
-                let controller3 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
-                let myAttributedMeetingString3 = NSMutableAttributedString()
-                
-                myAttributedMeetingString3.appendAttributedString(NSAttributedString(string:"Always add value to the client on every encounter, however small. The client should leave the encounter richer.\n\n",attributes:bodyAttributes ))
-                controller3.title = "Value"
-                controller3.detailTextContent = myAttributedMeetingString3
-                controllerArray.append(controller3)
-                let controller4 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
-                let myAttributedMeetingString4 = NSMutableAttributedString()
-                myAttributedMeetingString4.appendAttributedString(NSAttributedString(string:"Ensure that you make agreements however small or trivial and always follow through on the agreements.",attributes:bodyAttributes ))
-                controller4.title = "Agreement"
-                controller4.detailTextContent = myAttributedMeetingString4
-                controllerArray.append(controller4)
+            
             }else if self.detailText == "PKAE" {
                 let controller1 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
                 
