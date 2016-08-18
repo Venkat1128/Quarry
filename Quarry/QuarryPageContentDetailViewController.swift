@@ -10,9 +10,9 @@ import UIKit
 
 class QuarryPageContentDetailViewController: UIViewController,UITextViewDelegate {
     @IBOutlet weak var detailTextView: UITextView!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailTextTitleLabel: UILabel!
     var detailTextContent:NSMutableAttributedString!
-   
+    var detailTitleText:String!
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -21,6 +21,7 @@ class QuarryPageContentDetailViewController: UIViewController,UITextViewDelegate
         detailTextView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).CGColor
         detailTextView.layer.borderWidth = 1.0
         detailTextView.layer.cornerRadius = 10
+        self.detailTextTitleLabel.text = self.detailTitleText;
        // detailTextView.backgroundColor = UIColor.clearColor()
         
        // detailTextView.textColor = UIColor.blackColor()//UIColor(red: 171/255, green: 49/255, blue: 30/255, alpha: 1.0)
