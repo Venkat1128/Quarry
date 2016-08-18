@@ -204,7 +204,7 @@ Find new ways to engage the consumer
 Optimise your investments
 We emphasise local accountability and use a flexible mix of global delivery resources — all geared toward the goal of providing practical and actionable recommendations and right-sized services tightly aligned to your needs.
 - See more at: http://emea.nttdata.com/uk/industries/telecommunications/overview/en/index.html#sthash.L8fmBDQR.dpuf</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
                                 <connections>

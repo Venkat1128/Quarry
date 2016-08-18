@@ -65,7 +65,7 @@ class QuarryPageViewController: UIViewController , UIPageViewControllerDataSourc
         pageContentViewController.imageName = self.numberOfPages[index].topicImageName
         pageContentViewController.titleText = self.numberOfPages[index].topicTitle
         pageContentViewController.pageIndex = index
-        pageContentViewController.detailText = self.numberOfPages[index].topicDetailText
+        pageContentViewController.titleLabelText = self.numberOfPages[index].topicDetailText
         return pageContentViewController
     }
     
