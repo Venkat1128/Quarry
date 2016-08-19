@@ -20,14 +20,15 @@ class QuarryPageContentViewController: UIViewController {
     var titleLabelText : String!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.topicpptImage.image = UIImage(named: imageName)
+        /*self.topicpptImage.image = UIImage(named: imageName)
         self.topicpptImage.layer.borderColor = UIColor.brownColor().CGColor
         self.topicpptImage.layer.borderWidth = 2
-        self.topicpptImage.layer.cornerRadius = 10
-        
+        self.topicpptImage.layer.cornerRadius = 10*/
+        self.titleLabel.text = self.titleLabelText
         let tap = UITapGestureRecognizer(target: self, action: #selector(QuarryPageContentViewController.tappedView))
-        topicpptImage.addGestureRecognizer(tap)
-        topicpptImage.userInteractionEnabled = true
+        tap.numberOfTapsRequired = 1
+        view.addGestureRecognizer(tap)
+        //topicpptImage.userInteractionEnabled = true
         
     }
 
@@ -47,9 +48,8 @@ class QuarryPageContentViewController: UIViewController {
     }
     */
     func tappedView(){
-       // let detailViewTextView = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
+      
         let detailViewPageMenu = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryDetailViewController") as! QuarryDetailViewController
-       // let detailViewPageMenu : QuarryDetailViewController = QuarryDetailViewController(nibName: "QuarryDetailViewController",bundle: nil)
         detailViewPageMenu.titleLabelText = titleLabelText
         detailViewPageMenu.title = self.titleText
         let navController = UINavigationController(rootViewController: detailViewPageMenu)

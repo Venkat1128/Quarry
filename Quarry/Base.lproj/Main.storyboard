@@ -13,7 +13,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="g6N-M7-Ixh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="8Ru-Ji-5nd">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -31,7 +31,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nw-GQ-gzV">
                                             <rect key="frame" x="5" y="40" width="50" height="17"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2Z-ef-Jxa">
@@ -130,21 +130,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uag-j0-oKR">
-                                <rect key="frame" x="20" y="44" width="560" height="548"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0B-NL-xfv">
+                                <rect key="frame" x="20" y="289" width="560" height="21"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="sqi-GO-mgb" firstAttribute="top" secondItem="Uag-j0-oKR" secondAttribute="bottom" constant="8" id="RO5-e6-0iM"/>
-                            <constraint firstItem="Uag-j0-oKR" firstAttribute="leading" secondItem="tPE-i1-7GD" secondAttribute="leading" constant="20" id="SrO-7k-Y1U"/>
-                            <constraint firstItem="Uag-j0-oKR" firstAttribute="top" secondItem="xb1-4d-gO1" secondAttribute="bottom" constant="24" id="dso-lW-Mxc"/>
-                            <constraint firstAttribute="trailing" secondItem="Uag-j0-oKR" secondAttribute="trailing" constant="20" id="u5Y-Ki-5uX"/>
+                            <constraint firstItem="b0B-NL-xfv" firstAttribute="centerY" secondItem="tPE-i1-7GD" secondAttribute="centerY" id="Gkd-QL-c6L"/>
+                            <constraint firstAttribute="trailing" secondItem="b0B-NL-xfv" secondAttribute="trailing" constant="20" id="gsw-64-O6f"/>
+                            <constraint firstItem="b0B-NL-xfv" firstAttribute="leading" secondItem="tPE-i1-7GD" secondAttribute="leading" constant="20" id="org-zq-gFR"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="topicpptImage" destination="Uag-j0-oKR" id="30N-LV-kID"/>
+                        <outlet property="titleLabel" destination="b0B-NL-xfv" id="3Dv-IR-KgH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QWz-xD-bkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -171,7 +173,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-kd-ISm">
                                 <rect key="frame" x="20" y="61" width="560" height="519"/>
-                                <color key="backgroundColor" red="0.90818208456039429" green="0.97409957647323608" blue="0.89957314729690552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">The telecommunications market is undergoing an unprecedented degree of change. The technology advancements in fiber and 3G LTE, and the increasing popularity of MVNOs and MTM are dramatically changing the way consumers engage with telecommunications providers. The expectation of the consumer and the variety of the technology choices pose increasing challenges to traditional and new players alike.
 With our parent company, NTT, operating as the largest global telecommunication organisation in the world, NTT DATA is uniquely placed to understand the pressures and challenges of your sector and offers specific solutions for governing and monitoring its key processes.
 Why NTT DATA?
@@ -182,6 +184,7 @@ Find new ways to engage the consumer
 Optimise your investments
 We emphasise local accountability and use a flexible mix of global delivery resources — all geared toward the goal of providing practical and actionable recommendations and right-sized services tightly aligned to your needs.
 - See more at: http://emea.nttdata.com/uk/industries/telecommunications/overview/en/index.html#sthash.L8fmBDQR.dpuf</string>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
