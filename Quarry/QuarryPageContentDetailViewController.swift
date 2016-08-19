@@ -23,7 +23,7 @@ class QuarryPageContentDetailViewController: UIViewController,UITextViewDelegate
         detailTextView.layer.cornerRadius = 10
         self.detailTextTitleLabel.text = self.detailTitleText;
        // detailTextView.backgroundColor = UIColor.clearColor()
-        
+        detailTextView.textColor = UIColor.yellowColor()
        // detailTextView.textColor = UIColor.blackColor()//UIColor(red: 171/255, green: 49/255, blue: 30/255, alpha: 1.0)
         // Do any additional setup after loading the view.
     }
