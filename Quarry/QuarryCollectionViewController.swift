@@ -36,9 +36,8 @@ class QuarryCollectionViewController: UICollectionViewController {
         self.imageArry = ["buildingrelationship.png","meeting.png","sellingtoclient.png","proposal.png","comingsoon1.png","comingsoon2.png"];
         let navBarColor = navigationController!.navigationBar
         navBarColor.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
-        navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        
+        navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
+                
         // Having a client
         
         havinagAMeetingList.append(QuarryModelObject(topicTitle: "Have a meeting", topicImageName: "piuc.png", topicDetailText:"Scripted play")!)

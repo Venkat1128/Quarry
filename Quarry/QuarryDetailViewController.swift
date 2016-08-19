@@ -16,9 +16,7 @@ class QuarryDetailViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        //self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
         let titleAttributes = [NSFontAttributeName:UIFont(name: "HelveticaNeue-Bold", size: 15.0)!, NSForegroundColorAttributeName:UIColor.blackColor()]
@@ -171,7 +169,7 @@ class QuarryDetailViewController: UIViewController {
             
             let myAttributedMeetingString2 = NSMutableAttributedString()
             
-            myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"• Based on personal agenda\n\n• Make it memorable to them\n\n• Visualise the end with them in it\n\n• Unfreeze the individual from status quo\n\n• Show the journey and change\n\n• Never judge, deny or assume their emotions\n\n• Review: safety, affirmation, power, recognition, achievement, avoid", attributes: bodyAttributes))
+            myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"• Based on personal agenda\n\n• Make it memorable to them\n\n• Visualise the end with them in it\n\n• Unfreeze the individual from status quo\n\n• Show the journey and change\n\n• Never judge, deny or assume their emotions\n\n• Review: safety, affirmation, power, recognition, achievement, avoid\n", attributes: bodyAttributes))
             controller2.title = "Desired Personal Gains"
             controller2.detailTitleText = "Desired Personal Gains"
             controller2.detailTextContent = myAttributedMeetingString2;

@@ -17,7 +17,8 @@ class QuarryPageViewController: UIViewController , UIPageViewControllerDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         let navBarColor = navigationController!.navigationBar
-         navBarColor.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
+        navBarColor.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
+        navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
         self.title = catTitleText
         reset()
         // Do any additional setup after loading the view.

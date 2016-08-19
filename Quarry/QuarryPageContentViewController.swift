@@ -53,6 +53,8 @@ class QuarryPageContentViewController: UIViewController {
         detailViewPageMenu.titleLabelText = titleLabelText
         detailViewPageMenu.title = self.titleText
         let navController = UINavigationController(rootViewController: detailViewPageMenu)
+        navController.navigationBar.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
+        navController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
         detailViewPageMenu.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done,target: self,action: #selector(QuarryPageContentViewController.dismiss))
         self.presentViewController(navController, animated: true, completion: nil)
     }
