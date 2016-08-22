@@ -15,6 +15,10 @@ class QuarryDetailViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+          
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
         //self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
@@ -36,7 +40,25 @@ class QuarryDetailViewController: UIViewController {
             .MenuItemWidth(90),
             .CenterMenuItems(true)
         ]
-        if self.title == "Have a meeting" {
+        
+        
+        if self.title == "WWF"{
+            
+            let myAttributedROVAString = NSMutableAttributedString()
+            //ROVA -   Building Client relationship
+            
+            myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Tell the story: \n\n",attributes:titleAttributes ))
+            myAttributedROVAString.appendAttributedString(NSAttributedString(string:"• When we worked with…\n\n• They were facing … challenge\n\n• They new that…\n\n• (We conducted a …)\n\n• What we found was …\n\n• We launched a programme to …\n\n• The impact/ benefit was …\n\n", attributes: bodyAttributes))
+            
+            let controller1 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
+            
+            controller1.title = self.titleLabelText
+            controller1.detailTextContent = myAttributedROVAString;
+            controllerArray.append(controller1)
+            
+            
+        }
+        else if self.title == "Have a meeting" {
             parameters = [
                 .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
                 .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
@@ -188,12 +210,6 @@ class QuarryDetailViewController: UIViewController {
         self.view.addSubview(pageMenu!.view)
         
         pageMenu!.didMoveToParentViewController(self)
-        
-        
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     

@@ -56,7 +56,9 @@ class QuarryPageContentViewController: UIViewController {
         navController.navigationBar.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
         navController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
         detailViewPageMenu.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done,target: self,action: #selector(QuarryPageContentViewController.dismiss))
-        self.presentViewController(navController, animated: true, completion: nil)
+        dispatch_async(dispatch_get_main_queue(), {
+            self.presentViewController(navController, animated: true, completion: nil)
+        })
     }
     func dismiss(){
         self.dismissViewControllerAnimated(true, completion: nil)

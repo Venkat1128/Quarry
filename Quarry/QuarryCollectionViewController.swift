@@ -13,6 +13,7 @@ class QuarryCollectionViewController: UICollectionViewController {
     var dashBoardItems = [String]()
     var imageArry = [String]()
     var pageCatTiteText : String = ""
+    var wwfList = [QuarryModelObject]()
     var havinagAMeetingList = [QuarryModelObject]()
     var buildingaRelationship = [QuarryModelObject]()
     var sellingToClient = [QuarryModelObject]()
@@ -32,34 +33,37 @@ class QuarryCollectionViewController: UICollectionViewController {
         self.collectionView?.delegate = self;
         
         // Do any additional setup after loading the view.
-        self.dashBoardItems = ["Have a meeting","Build a relation","Selling to the client","Write a proposal","Coming soon","Coming soon"]
-        self.imageArry = ["buildingrelationship.png","meeting.png","sellingtoclient.png","proposal.png","comingsoon1.png","comingsoon2.png"];
+        self.dashBoardItems = ["WWF","Have a meeting","Build a relation","Selling to the client","Write a proposal","Coming soon"]
+        self.imageArry = ["comingsoon2.png","buildingrelationship.png","meeting.png","sellingtoclient.png","proposal.png","comingsoon1.png"];
         let navBarColor = navigationController!.navigationBar
         navBarColor.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
-                
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        // WWF
+        wwfList.append(QuarryModelObject(topicTitle: "WWF", topicImageName: "piuc.png", topicDetailText:"What We Find")!)
+        quarryItemsDict[dashBoardItems[0]] = wwfList
         // Having a client
         
         havinagAMeetingList.append(QuarryModelObject(topicTitle: "Have a meeting", topicImageName: "piuc.png", topicDetailText:"Scripted play")!)
-   
-        quarryItemsDict[dashBoardItems[0]] = havinagAMeetingList
+        
+        quarryItemsDict[dashBoardItems[1]] = havinagAMeetingList
         // Building a Relationship
         
         //ROVA -   Building Client relationship
         
         buildingaRelationship.append(QuarryModelObject(topicTitle: "Build a relation", topicImageName: "rova.png", topicDetailText:"ROVA")!)
-        //PKAE 
+        //PKAE
         
         buildingaRelationship.append(QuarryModelObject(topicTitle: "Build a relation", topicImageName: "pkae.png", topicDetailText:"Building Credibility")!)
-        quarryItemsDict[dashBoardItems[1]] = buildingaRelationship
+        quarryItemsDict[dashBoardItems[2]] = buildingaRelationship
         
         // Selling to Client
         //Desired Business Results
-         sellingToClient.append(QuarryModelObject(topicTitle: "Selling to the client", topicImageName: "dbr.png", topicDetailText:"Why do they buy")!)
+        sellingToClient.append(QuarryModelObject(topicTitle: "Selling to the client", topicImageName: "dbr.png", topicDetailText:"Why do they buy")!)
         //Desired Personal Gains
         
         //sellingToClient.append(QuarryModelObject(topicTitle: "Selling to the client", topicImageName: "dpg.png", topicDetailText:"DPG")!)
-        quarryItemsDict[dashBoardItems[2]] = sellingToClient
+        quarryItemsDict[dashBoardItems[3]] = sellingToClient
     }
     
     override func didReceiveMemoryWarning() {
@@ -68,19 +72,19 @@ class QuarryCollectionViewController: UICollectionViewController {
     }
     
     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
         if segue.identifier == "quarryPageSegue" {
             let detailsVC = segue.destinationViewController as! QuarryPageViewController
             detailsVC.catTitleText = pageCatTiteText
             detailsVC.numberOfPages = quarryItemsDict[detailsVC.catTitleText!]!
         }
-     }
- 
+    }
+    
     
     // MARK: UICollectionViewDataSource
     
@@ -97,15 +101,15 @@ class QuarryCollectionViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! QuarryCollectionViewCell
-       /* cell.backgroundColor = UIColor(
-            red:63.0/255.0,
-            green:108.0/255.0,
-            blue:175.0/255.0,
-            alpha:1.0)*/
+        /* cell.backgroundColor = UIColor(
+         red:63.0/255.0,
+         green:108.0/255.0,
+         blue:175.0/255.0,
+         alpha:1.0)*/
         cell.textLabel.text = dashBoardItems[indexPath.row]
         //cell.textLabel.textColor = UIColor.orangeColor()
         
-              
+        
         let image : UIImage = UIImage(named: imageArry[indexPath.row])!
         cell.bgImage.image = image
         // Configure the cell
@@ -126,7 +130,7 @@ class QuarryCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
-        if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2) {
+        if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3) {
             pageCatTiteText = dashBoardItems[indexPath.row]
             self.performSegueWithIdentifier("quarryPageSegue", sender: reuseIdentifier)
         }else{
@@ -139,7 +143,7 @@ class QuarryCollectionViewController: UICollectionViewController {
             // show the alert
             self.presentViewController(alert, animated: true, completion: nil)
         }
-     
+        
     }
     
     /*

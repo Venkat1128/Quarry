@@ -90,7 +90,11 @@ class QuarryPageViewController: UIViewController , UIPageViewControllerDataSourc
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return numberOfPages.count
+        if numberOfPages.count > 1 {
+            return numberOfPages.count
+        }else{
+            return 0
+        }
     }
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0
