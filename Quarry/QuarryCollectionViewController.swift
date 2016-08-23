@@ -21,7 +21,7 @@ class QuarryCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        assignbackground()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -31,7 +31,7 @@ class QuarryCollectionViewController: UICollectionViewController {
         layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
         self.collectionView?.collectionViewLayout = layout
         self.collectionView?.delegate = self;
-        
+        self.collectionView!.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
         self.dashBoardItems = ["WWF","Have a meeting","Build a relation","Selling to the client","Write a proposal","Coming soon"]
         self.imageArry = ["comingsoon2.png","buildingrelationship.png","meeting.png","sellingtoclient.png","proposal.png","comingsoon1.png"];
@@ -70,7 +70,19 @@ class QuarryCollectionViewController: UICollectionViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func assignbackground(){
+        let background = UIImage(named: "quarry_bg")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.ScaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+     
+        //self.collectionView!.addSubview(imageView)
+       // self.collectionView!.sendSubviewToBack(imageView)
+    }
     
     // MARK: - Navigation
     

@@ -131,18 +131,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0B-NL-xfv">
-                                <rect key="frame" x="20" y="289" width="560" height="21"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="17"/>
+                                <rect key="frame" x="20" y="277" width="560" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="37"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="b0B-NL-xfv" firstAttribute="centerY" secondItem="tPE-i1-7GD" secondAttribute="centerY" id="Gkd-QL-c6L"/>
-                            <constraint firstAttribute="trailing" secondItem="b0B-NL-xfv" secondAttribute="trailing" constant="20" id="gsw-64-O6f"/>
-                            <constraint firstItem="b0B-NL-xfv" firstAttribute="leading" secondItem="tPE-i1-7GD" secondAttribute="leading" constant="20" id="org-zq-gFR"/>
+                            <constraint firstItem="b0B-NL-xfv" firstAttribute="leading" secondItem="tPE-i1-7GD" secondAttribute="leadingMargin" id="DQa-tw-l7S"/>
+                            <constraint firstItem="b0B-NL-xfv" firstAttribute="centerY" secondItem="tPE-i1-7GD" secondAttribute="centerY" id="dOP-tJ-Kid"/>
+                            <constraint firstItem="b0B-NL-xfv" firstAttribute="trailing" secondItem="tPE-i1-7GD" secondAttribute="trailingMargin" id="q4A-yq-TQq"/>
                         </constraints>
                     </view>
                     <connections>
@@ -185,7 +185,7 @@ Optimise your investments
 We emphasise local accountability and use a flexible mix of global delivery resources — all geared toward the goal of providing practical and actionable recommendations and right-sized services tightly aligned to your needs.
 - See more at: http://emea.nttdata.com/uk/industries/telecommunications/overview/en/index.html#sthash.L8fmBDQR.dpuf</string>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
                                 <connections>

@@ -15,7 +15,7 @@ class QuarryPageContentDetailViewController: UIViewController,UITextViewDelegate
     var detailTitleText:String!
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+      assignbackground()
         detailTextView.attributedText = detailTextContent
         self.detailTextView.delegate = self
         detailTextView.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).CGColor
@@ -37,6 +37,20 @@ class QuarryPageContentDetailViewController: UIViewController,UITextViewDelegate
         super.viewDidLayoutSubviews()
         
         detailTextView.setContentOffset(CGPointZero, animated: false)
+    }
+    func assignbackground(){
+        let background = UIImage(named: "quarry_bg")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.ScaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        detailTextView.addSubview(imageView)
+        detailTextView.sendSubviewToBack(imageView)
+       // view.addSubview(imageView)
+       // self.view.sendSubviewToBack(imageView)
     }
     /*
     // MARK: - Navigation

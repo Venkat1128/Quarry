@@ -29,6 +29,7 @@ class QuarryPageContentViewController: UIViewController {
         tap.numberOfTapsRequired = 1
         view.addGestureRecognizer(tap)
         //topicpptImage.userInteractionEnabled = true
+        assignbackground()
         
     }
 
@@ -37,7 +38,18 @@ class QuarryPageContentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func assignbackground(){
+        let background = UIImage(named: "quarry_bg")
+        
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIViewContentMode.ScaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+         view.addSubview(imageView)
+         self.view.sendSubviewToBack(imageView)
+    }
     /*
     // MARK: - Navigation
 

@@ -23,9 +23,9 @@ class QuarryDetailViewController: UIViewController {
         //self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
-        let titleAttributes = [NSFontAttributeName:UIFont(name: "HelveticaNeue-Bold", size: 15.0)!, NSForegroundColorAttributeName:UIColor.blackColor()]
+        let titleAttributes = [NSFontAttributeName:UIFont(name: "HelveticaNeue-Bold", size: 17.0)!, NSForegroundColorAttributeName:UIColor.blackColor()]
         
-        let bodyAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 13.0)!, NSForegroundColorAttributeName: UIColor.blackColor()]
+        let bodyAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 17.0)!, NSForegroundColorAttributeName: UIColor.blackColor()]
         
         var controllerArray : [UIViewController] = []
         var parameters : [CAPSPageMenuOption]?
@@ -47,7 +47,7 @@ class QuarryDetailViewController: UIViewController {
             let myAttributedROVAString = NSMutableAttributedString()
             //ROVA -   Building Client relationship
             
-            myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Tell the story: \n\n",attributes:titleAttributes ))
+            myAttributedROVAString.appendAttributedString(NSAttributedString(string:"\nTell the story: \n\n",attributes:titleAttributes ))
             myAttributedROVAString.appendAttributedString(NSAttributedString(string:"• When we worked with…\n\n• They were facing … challenge\n\n• They new that…\n\n• (We conducted a …)\n\n• What we found was …\n\n• We launched a programme to …\n\n• The impact/ benefit was …\n\n", attributes: bodyAttributes))
             
             let controller1 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
@@ -73,7 +73,7 @@ class QuarryDetailViewController: UIViewController {
             
             let myAttributedMeetingString1 = NSMutableAttributedString()
             
-            myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"• Research\n\n• Personal biography\n\n• Organisation structure\n\n• Client strategic objectives\n\n• Decision network\n\n• Competitor presence\n\n• Pain points\n\n• Hypotheses on pain points\n\n• Script the meeting\n\n• Identify the what we finds\n\n• Understand the time agreement\n\n• Secretary’s name.\n\n", attributes: bodyAttributes))
+            myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"\n• Research\n\n• Personal biography\n\n• Organisation structure\n\n• Client strategic objectives\n\n• Decision network\n\n• Competitor presence\n\n• Pain points\n\n• Hypotheses on pain points\n\n• Script the meeting\n\n• Identify the what we finds\n\n• Understand the time agreement\n\n• Secretary’s name.\n\n", attributes: bodyAttributes))
             controller1.title = "PREPARE"
             controller1.detailTitleText = "PREPARE"
             controller1.detailTextContent = myAttributedMeetingString1;
@@ -81,7 +81,7 @@ class QuarryDetailViewController: UIViewController {
             
             let controller2 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
             let myAttributedMeetingString2 = NSMutableAttributedString()
-            myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"• Ice breaker to relax client and be human Agree purpose, agenda and time commitment\n\n• Personal introduction to start the peer relationship\n\n• Outline our focus on their issues, confidentially\n\n• Firm introduction and the people we work with\n\n• Recognise our capability is broader than experienced\n\n• Pre-empt objections with content and WWFs.\n\n",attributes:bodyAttributes ))
+            myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"\n• Ice breaker to relax client and be human Agree purpose, agenda and time commitment\n\n• Personal introduction to start the peer relationship\n\n• Outline our focus on their issues, confidentially\n\n• Firm introduction and the people we work with\n\n• Recognise our capability is broader than experienced\n\n• Pre-empt objections with content and WWFs.\n\n",attributes:bodyAttributes ))
             controller2.title = "INTRODUCTION"
             controller2.detailTitleText = "INTRODUCTION"
             controller2.detailTextContent = myAttributedMeetingString2
@@ -90,7 +90,7 @@ class QuarryDetailViewController: UIViewController {
             let controller3 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
             let myAttributedMeetingString3 = NSMutableAttributedString()
             
-            myAttributedMeetingString3.appendAttributedString(NSAttributedString(string:"• Search for the pain – and the emotion / owner\n\n• Highlight need for acceleration / mobilisation\n\n• Share 2-3 what we finds around the issue\n\n• Introduce how we work collaboratively\n\n• Use repeated open questions to understand\n\n• Listen, listen, listen & probe for completeness\n\n• Demonstrate empathy & understand personal stak.\n\n",attributes:bodyAttributes ))
+            myAttributedMeetingString3.appendAttributedString(NSAttributedString(string:"\n• Search for the pain – and the emotion / owner\n\n• Highlight need for acceleration / mobilisation\n\n• Share 2-3 what we finds around the issue\n\n• Introduce how we work collaboratively\n\n• Use repeated open questions to understand\n\n• Listen, listen, listen & probe for completeness\n\n• Demonstrate empathy & understand personal stak.\n\n",attributes:bodyAttributes ))
             controller3.title = "UNDERSTANDING"
             controller3.detailTitleText = "UNDERSTANDING"
             controller3.detailTextContent = myAttributedMeetingString3
@@ -98,7 +98,7 @@ class QuarryDetailViewController: UIViewController {
             
             let controller4 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
             let myAttributedMeetingString4 = NSMutableAttributedString()
-            myAttributedMeetingString4.appendAttributedString(NSAttributedString(string:"• Where we have done it before, delivery results\n\n• Related issues to show true understanding\n\n• Use their language to show what we did and not how\n\n• Manage the emotional and political issues\n\n• Confirm issues and agree next steps\n\n• Schedule next meeting with homework for them\n\n• Take the next steps yourself for ownership.",attributes:bodyAttributes ))
+            myAttributedMeetingString4.appendAttributedString(NSAttributedString(string:"\n• Where we have done it before, delivery results\n\n• Related issues to show true understanding\n\n• Use their language to show what we did and not how\n\n• Manage the emotional and political issues\n\n• Confirm issues and agree next steps\n\n• Schedule next meeting with homework for them\n\n• Take the next steps yourself for ownership.",attributes:bodyAttributes ))
             controller4.title = "CREDIBILITY"
             controller4.detailTitleText = "CREDIBILITY"
             controller4.detailTextContent = myAttributedMeetingString4
@@ -109,7 +109,7 @@ class QuarryDetailViewController: UIViewController {
                 
                 let myAttributedROVAString = NSMutableAttributedString()
                 //ROVA -   Building Client relationship
-                myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Every encounter you have with your client should cover ALL of the four below:\n\n",attributes: titleAttributes))
+                myAttributedROVAString.appendAttributedString(NSAttributedString(string:"\nEvery encounter you have with your client should cover ALL of the four below:\n\n",attributes: titleAttributes))
                 
                 myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Relationship: ",attributes:titleAttributes ))
                 myAttributedROVAString.appendAttributedString(NSAttributedString(string:"Ensure you build upon your relationship with the client at every opportunity, show that you care through getting to know them.\n\n", attributes: bodyAttributes))
@@ -135,7 +135,7 @@ class QuarryDetailViewController: UIViewController {
                 
                 let myAttributedMeetingString1 = NSMutableAttributedString()
                 
-                myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"• Organised & timely\n\n• Use their language and speech\n\n• Professional courtesy\n\n• Listening skills\n\n• Emotional rapport.\n\n", attributes: bodyAttributes))
+                myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"\n• Organised & timely\n\n• Use their language and speech\n\n• Professional courtesy\n\n• Listening skills\n\n• Emotional rapport.\n\n", attributes: bodyAttributes))
                 controller1.title = "Presentation"
                 controller1.detailTitleText = "Presentation"
                 controller1.detailTextContent = myAttributedMeetingString1;
@@ -143,7 +143,7 @@ class QuarryDetailViewController: UIViewController {
                 
                 let controller2 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
                 let myAttributedMeetingString2 = NSMutableAttributedString()
-                myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"• Business understanding\n\n• Approaches and insight\n\n• Technical expertise\n\n• Organisational knowledge\n\n",attributes:bodyAttributes ))
+                myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"\n• Business understanding\n\n• Approaches and insight\n\n• Technical expertise\n\n• Organisational knowledge\n\n",attributes:bodyAttributes ))
                 controller2.title = "Knowledge"
                 controller2.detailTitleText = "Knowledge"
                 controller2.detailTextContent = myAttributedMeetingString2
@@ -151,14 +151,14 @@ class QuarryDetailViewController: UIViewController {
                 let controller3 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
                 let myAttributedMeetingString3 = NSMutableAttributedString()
                 
-                myAttributedMeetingString3.appendAttributedString(NSAttributedString(string:"• People you know\n\n• References given\n\n• Allies in the organisation\n\n",attributes:bodyAttributes ))
+                myAttributedMeetingString3.appendAttributedString(NSAttributedString(string:"\n• People you know\n\n• References given\n\n• Allies in the organisation\n\n",attributes:bodyAttributes ))
                 controller3.title = "Associations"
                 controller3.detailTitleText = "Associations"
                 controller3.detailTextContent = myAttributedMeetingString3
                 controllerArray.append(controller3)
                 let controller4 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
                 let myAttributedMeetingString4 = NSMutableAttributedString()
-                myAttributedMeetingString4.appendAttributedString(NSAttributedString(string:"• Personal track record\n\n• Relevant credentials\n\n• What you have done\n\n• Other credentials",attributes:bodyAttributes ))
+                myAttributedMeetingString4.appendAttributedString(NSAttributedString(string:"\n• Personal track record\n\n• Relevant credentials\n\n• What you have done\n\n• Other credentials",attributes:bodyAttributes ))
                 controller4.title = "Experience"
                 controller4.detailTitleText = "Experience"
                 controller4.detailTextContent = myAttributedMeetingString4
@@ -181,7 +181,7 @@ class QuarryDetailViewController: UIViewController {
             
             let myAttributedMeetingString1 = NSMutableAttributedString()
             
-            myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"• Use external research\n\n• Directly relevant to their issue\n\n• Value based discussions\n\n• Measurable benefits and results\n\n• Financially attractive\n\n• Logical and rational structure\n\n• Focus on business improvement\n\n• Frame a solution to their problem", attributes: bodyAttributes))
+            myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"\n• Use external research\n\n• Directly relevant to their issue\n\n• Value based discussions\n\n• Measurable benefits and results\n\n• Financially attractive\n\n• Logical and rational structure\n\n• Focus on business improvement\n\n• Frame a solution to their problem", attributes: bodyAttributes))
             controller1.title = "Desired Business Results"
             controller1.detailTitleText = "Desired Business Results"
             controller1.detailTextContent = myAttributedMeetingString1;
@@ -191,7 +191,7 @@ class QuarryDetailViewController: UIViewController {
             
             let myAttributedMeetingString2 = NSMutableAttributedString()
             
-            myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"• Based on personal agenda\n\n• Make it memorable to them\n\n• Visualise the end with them in it\n\n• Unfreeze the individual from status quo\n\n• Show the journey and change\n\n• Never judge, deny or assume their emotions\n\n• Review: safety, affirmation, power, recognition, achievement, avoid\n", attributes: bodyAttributes))
+            myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"\n• Based on personal agenda\n\n• Make it memorable to them\n\n• Visualise the end with them in it\n\n• Unfreeze the individual from status quo\n\n• Show the journey and change\n\n• Never judge, deny or assume their emotions\n\n• Review: safety, affirmation, power, recognition, achievement, avoid\n", attributes: bodyAttributes))
             controller2.title = "Desired Personal Gains"
             controller2.detailTitleText = "Desired Personal Gains"
             controller2.detailTextContent = myAttributedMeetingString2;
