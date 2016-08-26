@@ -12,6 +12,7 @@ class QuarryPageContentViewController: UIViewController {
 
     @IBOutlet weak var topicpptImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var detailTextlabel: UILabel!
     
     var pageIndex: Int?
     var titleText : String!
@@ -25,6 +26,20 @@ class QuarryPageContentViewController: UIViewController {
         self.topicpptImage.layer.borderWidth = 2
         self.topicpptImage.layer.cornerRadius = 10*/
         self.titleLabel.text = self.titleLabelText
+        if self.titleLabelText == "What We Find" {
+            //
+        }else if self.titleLabelText == "Scripted play"{
+            self.detailTextlabel.text = "Client meetings can be managed to run like a scripted play"
+        }
+        else if self.titleLabelText == "ROVA"{
+            //self.detailTextlabel.text = "Client meetings can be managed to run like a scripted play"
+        }
+        else if self.titleLabelText == "Building Credibility"{
+            self.detailTextlabel.text = "Each way needs to be addressed over time, with the strongest credibility being built by delivery experience with that client"
+        }
+        else if self.titleLabelText == "Why do they buy"{
+            self.detailTextlabel.text = "Determining people’s personal agendas will help you focus on getting them to actually buy"
+        }
         let tap = UITapGestureRecognizer(target: self, action: #selector(QuarryPageContentViewController.tappedView))
         tap.numberOfTapsRequired = 1
         view.addGestureRecognizer(tap)

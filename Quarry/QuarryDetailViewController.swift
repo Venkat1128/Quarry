@@ -23,9 +23,13 @@ class QuarryDetailViewController: UIViewController {
         //self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
-        let titleAttributes = [NSFontAttributeName:UIFont(name: "HelveticaNeue-Bold", size: 17.0)!, NSForegroundColorAttributeName:UIColor.blackColor()]
+        let titleAttributes = [NSFontAttributeName:UIFont(name: "HelveticaNeue-Bold", size: 17.0)!, NSForegroundColorAttributeName:UIColor.yellowColor()]
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.Center
         
-        let bodyAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 17.0)!, NSForegroundColorAttributeName: UIColor.blackColor()]
+        let centerAttributes = [NSFontAttributeName:UIFont(name: "HelveticaNeue-Bold", size: 17.0)!, NSForegroundColorAttributeName:UIColor.blackColor(),NSParagraphStyleAttributeName:paragraphStyle]
+        
+        let bodyAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 17.0)!, NSForegroundColorAttributeName: UIColor.yellowColor()]
         
         var controllerArray : [UIViewController] = []
         var parameters : [CAPSPageMenuOption]?
@@ -181,7 +185,11 @@ class QuarryDetailViewController: UIViewController {
             
             let myAttributedMeetingString1 = NSMutableAttributedString()
             
-            myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"\n• Use external research\n\n• Directly relevant to their issue\n\n• Value based discussions\n\n• Measurable benefits and results\n\n• Financially attractive\n\n• Logical and rational structure\n\n• Focus on business improvement\n\n• Frame a solution to their problem", attributes: bodyAttributes))
+           
+            myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"\n• Use external research\n\n• Directly relevant to their issue\n\n• Value based discussions\n\n• Measurable benefits and results\n\n• Financially attractive\n\n• Logical and rational structure\n\n• Focus on business improvement\n\n• Frame a solution to their problem\n", attributes: bodyAttributes))
+            
+            myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"\n\nWHAT they buy\n\n",attributes: centerAttributes))
+            
             controller1.title = "Desired Business Results"
             controller1.detailTitleText = "Desired Business Results"
             controller1.detailTextContent = myAttributedMeetingString1;
@@ -191,7 +199,9 @@ class QuarryDetailViewController: UIViewController {
             
             let myAttributedMeetingString2 = NSMutableAttributedString()
             
+            
             myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"\n• Based on personal agenda\n\n• Make it memorable to them\n\n• Visualise the end with them in it\n\n• Unfreeze the individual from status quo\n\n• Show the journey and change\n\n• Never judge, deny or assume their emotions\n\n• Review: safety, affirmation, power, recognition, achievement, avoid\n", attributes: bodyAttributes))
+             myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"\n\nWHY they buy\n\n",attributes: centerAttributes))
             controller2.title = "Desired Personal Gains"
             controller2.detailTitleText = "Desired Personal Gains"
             controller2.detailTextContent = myAttributedMeetingString2;

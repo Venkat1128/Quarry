@@ -137,15 +137,26 @@
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="SsF-xx-gJr">
+                                <rect key="frame" x="20" y="526" width="560" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="b0B-NL-xfv" firstAttribute="leading" secondItem="tPE-i1-7GD" secondAttribute="leadingMargin" id="DQa-tw-l7S"/>
+                            <constraint firstItem="SsF-xx-gJr" firstAttribute="top" secondItem="b0B-NL-xfv" secondAttribute="bottom" constant="204" id="GQk-SK-6tX"/>
+                            <constraint firstAttribute="trailing" secondItem="SsF-xx-gJr" secondAttribute="trailing" constant="20" id="QZ6-6A-bTP"/>
+                            <constraint firstItem="sqi-GO-mgb" firstAttribute="top" secondItem="SsF-xx-gJr" secondAttribute="bottom" constant="14" id="V6I-UI-2H9"/>
                             <constraint firstItem="b0B-NL-xfv" firstAttribute="centerY" secondItem="tPE-i1-7GD" secondAttribute="centerY" id="dOP-tJ-Kid"/>
                             <constraint firstItem="b0B-NL-xfv" firstAttribute="trailing" secondItem="tPE-i1-7GD" secondAttribute="trailingMargin" id="q4A-yq-TQq"/>
+                            <constraint firstItem="SsF-xx-gJr" firstAttribute="leading" secondItem="tPE-i1-7GD" secondAttribute="leading" constant="20" id="qsU-hw-7PN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="detailTextlabel" destination="SsF-xx-gJr" id="juz-ZR-qpz"/>
                         <outlet property="titleLabel" destination="b0B-NL-xfv" id="3Dv-IR-KgH"/>
                     </connections>
                 </viewController>
@@ -173,7 +184,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-kd-ISm">
                                 <rect key="frame" x="20" y="61" width="560" height="519"/>
-                                <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">The telecommunications market is undergoing an unprecedented degree of change. The technology advancements in fiber and 3G LTE, and the increasing popularity of MVNOs and MTM are dramatically changing the way consumers engage with telecommunications providers. The expectation of the consumer and the variety of the technology choices pose increasing challenges to traditional and new players alike.
 With our parent company, NTT, operating as the largest global telecommunication organisation in the world, NTT DATA is uniquely placed to understand the pressures and challenges of your sector and offers specific solutions for governing and monitoring its key processes.
 Why NTT DATA?
@@ -184,7 +195,7 @@ Find new ways to engage the consumer
 Optimise your investments
 We emphasise local accountability and use a flexible mix of global delivery resources — all geared toward the goal of providing practical and actionable recommendations and right-sized services tightly aligned to your needs.
 - See more at: http://emea.nttdata.com/uk/industries/telecommunications/overview/en/index.html#sthash.L8fmBDQR.dpuf</string>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
