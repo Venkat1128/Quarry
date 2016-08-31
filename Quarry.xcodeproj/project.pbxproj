@@ -296,6 +296,7 @@
 				TargetAttributes = {
 					075F056A1CD4C7A5006626FA = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = TZBNJQ93D6;
 					};
 					075F057E1CD4C7A6006626FA = {
 						CreatedOnToolsVersion = 7.3;
@@ -469,7 +470,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "f03acd99-65f2-4d35-ba51-4f2774ee3b00";
+				PROVISIONING_PROFILE = "4e135969-f9ea-4334-b275-ee7ad2ba0908";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -510,7 +511,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "f03acd99-65f2-4d35-ba51-4f2774ee3b00";
+				PROVISIONING_PROFILE = "4e135969-f9ea-4334-b275-ee7ad2ba0908";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -522,11 +523,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Venkatesh Kurapati (CA24B2HMYA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Venkatesh Kurapati (CA24B2HMYA)";
 				INFOPLIST_FILE = Quarry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilecoeuk.Quarry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f03acd99-65f2-4d35-ba51-4f2774ee3b00";
+				PROVISIONING_PROFILE = "4e135969-f9ea-4334-b275-ee7ad2ba0908";
 			};
 			name = Debug;
 		};
@@ -535,11 +538,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Venkatesh Kurapati (CA24B2HMYA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Venkatesh Kurapati (CA24B2HMYA)";
 				INFOPLIST_FILE = Quarry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilecoeuk.Quarry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f03acd99-65f2-4d35-ba51-4f2774ee3b00";
+				PROVISIONING_PROFILE = "4e135969-f9ea-4334-b275-ee7ad2ba0908";
 			};
 			name = Release;
 		};
