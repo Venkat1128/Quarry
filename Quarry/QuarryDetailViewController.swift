@@ -27,7 +27,7 @@ class QuarryDetailViewController: UIViewController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = NSTextAlignment.Center
         
-        let centerAttributes = [NSFontAttributeName:UIFont(name: "HelveticaNeue-Bold", size: 17.0)!, NSForegroundColorAttributeName:UIColor.blackColor(),NSParagraphStyleAttributeName:paragraphStyle]
+        let centerAttributes = [NSFontAttributeName:UIFont(name: "HelveticaNeue-Bold", size: 17.0)!, NSForegroundColorAttributeName:UIColor.yellowColor(),NSParagraphStyleAttributeName:paragraphStyle]
         
         let bodyAttributes = [NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 17.0)!, NSForegroundColorAttributeName: UIColor.yellowColor()]
         
