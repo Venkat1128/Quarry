@@ -33,20 +33,20 @@ class QuarryCollectionViewController: UICollectionViewController {
         self.collectionView?.delegate = self;
         self.collectionView!.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
-        self.dashBoardItems = ["WWF","Have a meeting","Build a relation","Sell to the client","Write a proposal","Coming soon"]
-        self.imageArry = ["wwf.png","meeting.png","buildingrelationship.png","sellingtoclient.png","proposal.png","comingsoon1.png"];
+        self.dashBoardItems = ["Have a meeting","Build a relation","Sell to the client","Write a proposal","Coming soon","Coming soon"]
+        self.imageArry = ["meeting.png","buildingrelationship.png","sellingtoclient.png","proposal.png","comingsoon1.png","comingsoon1.png"];
         let navBarColor = navigationController!.navigationBar
         navBarColor.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         // WWF
         wwfList.append(QuarryModelObject(topicTitle: "WWF", topicImageName: "piuc.png", topicDetailText:"What We Find")!)
-        quarryItemsDict[dashBoardItems[0]] = wwfList
+        //quarryItemsDict[dashBoardItems[0]] = wwfList
         // Having a client
         
         havinagAMeetingList.append(QuarryModelObject(topicTitle: "Have a meeting", topicImageName: "piuc.png", topicDetailText:"Scripted play")!)
         
-        quarryItemsDict[dashBoardItems[1]] = havinagAMeetingList
+        quarryItemsDict[dashBoardItems[0]] = havinagAMeetingList
         // Building a Relationship
         
         //ROVA -   Building Client relationship
@@ -55,15 +55,17 @@ class QuarryCollectionViewController: UICollectionViewController {
         //PKAE
         
         buildingaRelationship.append(QuarryModelObject(topicTitle: "Build a relation", topicImageName: "pkae.png", topicDetailText:"Building Credibility")!)
-        quarryItemsDict[dashBoardItems[2]] = buildingaRelationship
+        quarryItemsDict[dashBoardItems[1]] = buildingaRelationship
         
         // Selling to Client
         //Desired Business Results
-        sellingToClient.append(QuarryModelObject(topicTitle: "Sell to the client", topicImageName: "dbr.png", topicDetailText:"Why do they buy")!)
+        sellingToClient.append(QuarryModelObject(topicTitle: "WWF", topicImageName: "piuc.png", topicDetailText:"What We Find")!)
+        sellingToClient.append(QuarryModelObject(topicTitle: "Sell to the client", topicImageName: "dbr.png", topicDetailText:"What & Why do they buy")!)
+        
         //Desired Personal Gains
         
         //sellingToClient.append(QuarryModelObject(topicTitle: "Selling to the client", topicImageName: "dpg.png", topicDetailText:"DPG")!)
-        quarryItemsDict[dashBoardItems[3]] = sellingToClient
+        quarryItemsDict[dashBoardItems[2]] = sellingToClient
     }
     
     override func didReceiveMemoryWarning() {
@@ -118,6 +120,9 @@ class QuarryCollectionViewController: UICollectionViewController {
         cell.bgImage.image = image
         cell.bgImage.clipsToBounds = true
         cell.bgImage.contentMode = .ScaleToFill
+        
+        //cell.bgImage.image = cell.bgImage.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        //cell.bgImage.tintColor = UIColor.blackColor()
         // Configure the cell
         cell.layer.borderColor = UIColor.grayColor().CGColor
         cell.layer.borderWidth = 1
@@ -137,7 +142,7 @@ class QuarryCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         //collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
-        if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3) {
+        if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2) {
             pageCatTiteText = dashBoardItems[indexPath.row]
             self.performSegueWithIdentifier("quarryPageSegue", sender: reuseIdentifier)
         }else{

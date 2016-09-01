@@ -37,7 +37,7 @@ class QuarryPageContentViewController: UIViewController {
         else if self.titleLabelText == "Building Credibility"{
             self.detailTextlabel.text = "Each way needs to be addressed over time, with the strongest credibility being built by delivery experience with that client"
         }
-        else if self.titleLabelText == "Why do they buy"{
+        else if self.titleLabelText == "What & Why do they buy"{
             self.detailTextlabel.text = "Determining people’s personal agendas will help you focus on getting them to actually buy"
         }
         let tap = UITapGestureRecognizer(target: self, action: #selector(QuarryPageContentViewController.tappedView))
