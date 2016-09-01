@@ -38,7 +38,7 @@ class QuarryCollectionViewController: UICollectionViewController {
         let navBarColor = navigationController!.navigationBar
         navBarColor.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+       // self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         // WWF
         wwfList.append(QuarryModelObject(topicTitle: "WWF", topicImageName: "piuc.png", topicDetailText:"What We Find")!)
         quarryItemsDict[dashBoardItems[0]] = wwfList
@@ -113,14 +113,6 @@ class QuarryCollectionViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! QuarryCollectionViewCell
-        /* cell.backgroundColor = UIColor(
-         red:63.0/255.0,
-         green:108.0/255.0,
-         blue:175.0/255.0,
-         alpha:1.0)*/
-        
-        //cell.textLabel.textColor = UIColor.orangeColor()
-        
         
         let image : UIImage = UIImage(named: imageArry[indexPath.row])!
         cell.bgImage.image = image
