@@ -33,12 +33,12 @@ class QuarryCollectionViewController: UICollectionViewController {
         self.collectionView?.delegate = self;
         self.collectionView!.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
-        self.dashBoardItems = ["WWF","Have a meeting","Build a relation","Selling to the client","Write a proposal","Coming soon"]
+        self.dashBoardItems = ["WWF","Have a meeting","Build a relation","Sell to the client","Write a proposal","Coming soon"]
         self.imageArry = ["wwf.png","meeting.png","buildingrelationship.png","sellingtoclient.png","proposal.png","comingsoon1.png"];
         let navBarColor = navigationController!.navigationBar
         navBarColor.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
-       // self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         // WWF
         wwfList.append(QuarryModelObject(topicTitle: "WWF", topicImageName: "piuc.png", topicDetailText:"What We Find")!)
         quarryItemsDict[dashBoardItems[0]] = wwfList
@@ -59,7 +59,7 @@ class QuarryCollectionViewController: UICollectionViewController {
         
         // Selling to Client
         //Desired Business Results
-        sellingToClient.append(QuarryModelObject(topicTitle: "Selling to the client", topicImageName: "dbr.png", topicDetailText:"Why do they buy")!)
+        sellingToClient.append(QuarryModelObject(topicTitle: "Sell to the client", topicImageName: "dbr.png", topicDetailText:"Why do they buy")!)
         //Desired Personal Gains
         
         //sellingToClient.append(QuarryModelObject(topicTitle: "Selling to the client", topicImageName: "dpg.png", topicDetailText:"DPG")!)

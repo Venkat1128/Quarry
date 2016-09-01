@@ -169,7 +169,7 @@ class QuarryDetailViewController: UIViewController {
                 controllerArray.append(controller4)
             }
             
-        }else if self.title == "Selling to the client" {// Customize menu (Optional)
+        }else if self.title == "Sell to the client" {// Customize menu (Optional)
             parameters = [
                 .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
                 .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
