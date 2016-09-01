@@ -45,7 +45,7 @@ class QuarryPageContentViewController: UIViewController {
         view.addGestureRecognizer(tap)
         //topicpptImage.userInteractionEnabled = true
         //assignbackground()
-        self.view.backgroundColor = UIColor(red: 25/255, green:155/255, blue: 215/255, alpha: 0.8)
+        self.view.backgroundColor = UIColor(red: 31/255, green:68/255, blue: 107/255, alpha: 0.8)
     }
 
     override func didReceiveMemoryWarning() {

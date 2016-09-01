@@ -34,7 +34,7 @@ class QuarryCollectionViewController: UICollectionViewController {
         self.collectionView!.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
         self.dashBoardItems = ["WWF","Have a meeting","Build a relation","Selling to the client","Write a proposal","Coming soon"]
-        self.imageArry = ["comingsoon2.png","buildingrelationship.png","meeting.png","sellingtoclient.png","proposal.png","comingsoon1.png"];
+        self.imageArry = ["wwf.png","meeting.png","buildingrelationship.png","sellingtoclient.png","proposal.png","comingsoon1.png"];
         let navBarColor = navigationController!.navigationBar
         navBarColor.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
         navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
@@ -118,16 +118,19 @@ class QuarryCollectionViewController: UICollectionViewController {
          green:108.0/255.0,
          blue:175.0/255.0,
          alpha:1.0)*/
-        cell.textLabel.text = dashBoardItems[indexPath.row]
+        
         //cell.textLabel.textColor = UIColor.orangeColor()
         
         
         let image : UIImage = UIImage(named: imageArry[indexPath.row])!
         cell.bgImage.image = image
+        cell.bgImage.clipsToBounds = true
+        cell.bgImage.contentMode = .ScaleToFill
         // Configure the cell
         cell.layer.borderColor = UIColor.grayColor().CGColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
+        cell.textLabel.text = dashBoardItems[indexPath.row]
         return cell
     }
     func collectionView(collectionView: UICollectionView,

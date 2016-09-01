@@ -34,7 +34,7 @@
                                             <color key="textColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2Z-ef-Jxa">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2Z-ef-Jxa">
                                             <rect key="frame" x="10" y="5" width="40" height="30"/>
                                         </imageView>
                                     </subviews>
@@ -130,26 +130,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0B-NL-xfv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="b0B-NL-xfv">
                                 <rect key="frame" x="20" y="277" width="560" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="37"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="SsF-xx-gJr">
-                                <rect key="frame" x="20" y="526" width="560" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="SsF-xx-gJr">
+                                <rect key="frame" x="20" y="520" width="560" height="66"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="b0B-NL-xfv" firstAttribute="leading" secondItem="tPE-i1-7GD" secondAttribute="leadingMargin" id="DQa-tw-l7S"/>
-                            <constraint firstItem="SsF-xx-gJr" firstAttribute="top" secondItem="b0B-NL-xfv" secondAttribute="bottom" constant="204" id="GQk-SK-6tX"/>
+                            <constraint firstItem="SsF-xx-gJr" firstAttribute="top" secondItem="b0B-NL-xfv" secondAttribute="bottom" priority="750" constant="198" id="GQk-SK-6tX"/>
                             <constraint firstAttribute="trailing" secondItem="SsF-xx-gJr" secondAttribute="trailing" constant="20" id="QZ6-6A-bTP"/>
-                            <constraint firstItem="sqi-GO-mgb" firstAttribute="top" secondItem="SsF-xx-gJr" secondAttribute="bottom" constant="14" id="V6I-UI-2H9"/>
+                            <constraint firstItem="sqi-GO-mgb" firstAttribute="top" secondItem="SsF-xx-gJr" secondAttribute="bottom" priority="750" constant="14" id="V6I-UI-2H9"/>
                             <constraint firstItem="b0B-NL-xfv" firstAttribute="centerY" secondItem="tPE-i1-7GD" secondAttribute="centerY" id="dOP-tJ-Kid"/>
                             <constraint firstItem="b0B-NL-xfv" firstAttribute="trailing" secondItem="tPE-i1-7GD" secondAttribute="trailingMargin" id="q4A-yq-TQq"/>
                             <constraint firstItem="SsF-xx-gJr" firstAttribute="leading" secondItem="tPE-i1-7GD" secondAttribute="leading" constant="20" id="qsU-hw-7PN"/>
