@@ -46,23 +46,7 @@ class QuarryDetailViewController: UIViewController {
         ]
         
         
-        if self.title == "WWF"{
-            
-            let myAttributedROVAString = NSMutableAttributedString()
-            //ROVA -   Building Client relationship
-            
-            myAttributedROVAString.appendAttributedString(NSAttributedString(string:"\nTell the story: \n\n",attributes:titleAttributes ))
-            myAttributedROVAString.appendAttributedString(NSAttributedString(string:"• When we worked with…\n\n• They were facing … challenge\n\n• They new that…\n\n• (We conducted a …)\n\n• What we found was …\n\n• We launched a programme to …\n\n• The impact/ benefit was …\n\n", attributes: bodyAttributes))
-            
-            let controller1 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
-            
-            controller1.title = self.titleLabelText
-            controller1.detailTextContent = myAttributedROVAString;
-            controllerArray.append(controller1)
-            
-            
-        }
-        else if self.title == "Have a meeting" {
+        if self.title == "Have a meeting" {
             parameters = [
                 .ScrollMenuBackgroundColor(UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)),
                 .ViewBackgroundColor(UIColor(red: 20.0/255.0, green: 20.0/255.0, blue: 20.0/255.0, alpha: 1.0)),
@@ -181,7 +165,51 @@ class QuarryDetailViewController: UIViewController {
                 .CenterMenuItems(true)
             ]
             
-            let controller1 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
+            if self.titleLabelText == "What We Find"{
+                
+                let myAttributedROVAString = NSMutableAttributedString()
+                //ROVA -   Building Client relationship
+                
+                myAttributedROVAString.appendAttributedString(NSAttributedString(string:"\nTell the story: \n\n",attributes:titleAttributes ))
+                myAttributedROVAString.appendAttributedString(NSAttributedString(string:"• When we worked with…\n\n• They were facing … challenge\n\n• They new that…\n\n• (We conducted a …)\n\n• What we found was …\n\n• We launched a programme to …\n\n• The impact/ benefit was …\n\n", attributes: bodyAttributes))
+                
+                let controller1 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
+                
+                controller1.title = self.titleLabelText
+                controller1.detailTextContent = myAttributedROVAString;
+                controllerArray.append(controller1)
+                
+                
+            }
+
+            else if self.titleLabelText == "WHAT they buy" {
+                let controller1 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
+                
+                let myAttributedMeetingString1 = NSMutableAttributedString()
+                
+                
+                myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"\n• Use external research\n\n• Directly relevant to their issue\n\n• Value based discussions\n\n• Measurable benefits and results\n\n• Financially attractive\n\n• Logical and rational structure\n\n• Focus on business improvement\n\n• Frame a solution to their problem\n", attributes: bodyAttributes))
+                
+                myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"\n\nWHAT they buy\n\n",attributes: centerAttributes))
+                
+                controller1.title = "Desired Business Results"
+                controller1.detailTextContent = myAttributedMeetingString1;
+                controllerArray.append(controller1)
+            }else if self.titleLabelText == "WHY do they buy"{
+                let controller2 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
+                
+                let myAttributedMeetingString2 = NSMutableAttributedString()
+                
+                
+                myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"\n• Based on personal agenda\n\n• Make it memorable to them\n\n• Visualise the end with them in it\n\n• Unfreeze the individual from status quo\n\n• Show the journey and change\n\n• Never judge, deny or assume their emotions\n\n• Review: safety, affirmation, power, recognition, achievement, avoid\n", attributes: bodyAttributes))
+                myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"\n\nWHY they buy\n\n",attributes: centerAttributes))
+                controller2.title = "Desired Personal Gains"
+                controller2.detailTextContent = myAttributedMeetingString2;
+                controllerArray.append(controller2)
+            }
+            
+           /* else{
+            let controller2 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
             
             let myAttributedMeetingString1 = NSMutableAttributedString()
             
@@ -190,22 +218,23 @@ class QuarryDetailViewController: UIViewController {
             
             myAttributedMeetingString1.appendAttributedString(NSAttributedString(string:"\n\nWHAT they buy\n\n",attributes: centerAttributes))
             
-            controller1.title = "Desired Business Results"
-            controller1.detailTitleText = "Desired Business Results"
-            controller1.detailTextContent = myAttributedMeetingString1;
-            controllerArray.append(controller1)
+            controller2.title = "Desired Business Results"
+            controller2.detailTitleText = "Desired Business Results"
+            controller2.detailTextContent = myAttributedMeetingString1;
+            controllerArray.append(controller2)
             
-            let controller2 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
+            let controller3 = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryPageContentDetailViewController") as! QuarryPageContentDetailViewController
             
             let myAttributedMeetingString2 = NSMutableAttributedString()
             
             
             myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"\n• Based on personal agenda\n\n• Make it memorable to them\n\n• Visualise the end with them in it\n\n• Unfreeze the individual from status quo\n\n• Show the journey and change\n\n• Never judge, deny or assume their emotions\n\n• Review: safety, affirmation, power, recognition, achievement, avoid\n", attributes: bodyAttributes))
              myAttributedMeetingString2.appendAttributedString(NSAttributedString(string:"\n\nWHY they buy\n\n",attributes: centerAttributes))
-            controller2.title = "Desired Personal Gains"
-            controller2.detailTitleText = "Desired Personal Gains"
-            controller2.detailTextContent = myAttributedMeetingString2;
-            controllerArray.append(controller2)
+            controller3.title = "Desired Personal Gains"
+            controller3.detailTitleText = "Desired Personal Gains"
+            controller3.detailTextContent = myAttributedMeetingString2;
+            controllerArray.append(controller3)
+            }*/
             
             
         }

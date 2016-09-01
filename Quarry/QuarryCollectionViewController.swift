@@ -59,8 +59,11 @@ class QuarryCollectionViewController: UICollectionViewController {
         
         // Selling to Client
         //Desired Business Results
-        sellingToClient.append(QuarryModelObject(topicTitle: "WWF", topicImageName: "piuc.png", topicDetailText:"What We Find")!)
-        sellingToClient.append(QuarryModelObject(topicTitle: "Sell to the client", topicImageName: "dbr.png", topicDetailText:"What & Why do they buy")!)
+        sellingToClient.append(QuarryModelObject(topicTitle: "Sell to the client", topicImageName: "piuc.png", topicDetailText:"What We Find")!)
+       // sellingToClient.append(QuarryModelObject(topicTitle: "Sell to the client", topicImageName: "dbr.png", topicDetailText:"What & Why do they buy")!)
+        
+        sellingToClient.append(QuarryModelObject(topicTitle: "Sell to the client", topicImageName: "dbr.png", topicDetailText:"WHAT they buy")!)
+        sellingToClient.append(QuarryModelObject(topicTitle: "Sell to the client", topicImageName: "dbr.png", topicDetailText:"WHY do they buy")!)
         
         //Desired Personal Gains
         
