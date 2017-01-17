@@ -31,14 +31,14 @@ class QuarryCollectionViewController: UICollectionViewController {
         layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
         self.collectionView?.collectionViewLayout = layout
         self.collectionView?.delegate = self;
-        self.collectionView!.backgroundColor = UIColor.whiteColor()
+        self.collectionView!.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
         self.dashBoardItems = ["Have a meeting","Build a relation","Sell to the client","Write a proposal","Coming soon","Coming soon"]
         self.imageArry = ["meeting.png","buildingrelationship.png","sellingtoclient.png","proposal.png","comingsoon1.png","comingsoon1.png"];
         let navBarColor = navigationController!.navigationBar
         navBarColor.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
-        navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navBarColor.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orange]
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         // WWF
         wwfList.append(QuarryModelObject(topicTitle: "WWF", topicImageName: "piuc.png", topicDetailText:"What We Find")!)
         //quarryItemsDict[dashBoardItems[0]] = wwfList
@@ -80,7 +80,7 @@ class QuarryCollectionViewController: UICollectionViewController {
         
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIViewContentMode.ScaleAspectFill
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         imageView.image = background
         imageView.center = view.center
@@ -92,11 +92,11 @@ class QuarryCollectionViewController: UICollectionViewController {
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         if segue.identifier == "quarryPageSegue" {
-            let detailsVC = segue.destinationViewController as! QuarryPageViewController
+            let detailsVC = segue.destination as! QuarryPageViewController
             detailsVC.catTitleText = pageCatTiteText
             detailsVC.numberOfPages = quarryItemsDict[detailsVC.catTitleText!]!
         }
@@ -105,58 +105,58 @@ class QuarryCollectionViewController: UICollectionViewController {
     
     // MARK: UICollectionViewDataSource
     
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return dashBoardItems.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! QuarryCollectionViewCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! QuarryCollectionViewCell
         
-        let image : UIImage = UIImage(named: imageArry[indexPath.row])!
+        let image : UIImage = UIImage(named: imageArry[(indexPath as NSIndexPath).row])!
         cell.bgImage.image = image
         cell.bgImage.clipsToBounds = true
-        cell.bgImage.contentMode = .ScaleToFill
+        cell.bgImage.contentMode = .scaleToFill
         
         //cell.bgImage.image = cell.bgImage.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         //cell.bgImage.tintColor = UIColor.blackColor()
         // Configure the cell
-        cell.layer.borderColor = UIColor.grayColor().CGColor
+        cell.layer.borderColor = UIColor.gray.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
-        cell.textLabel.text = dashBoardItems[indexPath.row]
+        cell.textLabel.text = dashBoardItems[(indexPath as NSIndexPath).row]
         return cell
     }
-    func collectionView(collectionView: UICollectionView,
+    func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
-                               sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+                               sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
         //device screen size
-        let width = UIScreen.mainScreen().bounds.size.width
-        let hight = UIScreen.mainScreen().bounds.size.height
+        let width = UIScreen.main.bounds.size.width
+        let hight = UIScreen.main.bounds.size.height
         //calculation of cell size
         return CGSize(width: ((width / 2) - 15)   , height: ((hight/3)-35))
     }
     // MARK: UICollectionViewDelegate
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = UIColor.grayColor()
-        if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2) {
-            pageCatTiteText = dashBoardItems[indexPath.row]
-            self.performSegueWithIdentifier("quarryPageSegue", sender: reuseIdentifier)
+        if ((indexPath as NSIndexPath).row == 0 || (indexPath as NSIndexPath).row == 1 || (indexPath as NSIndexPath).row == 2) {
+            pageCatTiteText = dashBoardItems[(indexPath as NSIndexPath).row]
+            self.performSegue(withIdentifier: "quarryPageSegue", sender: reuseIdentifier)
         }else{
             // create the alert
-            let alert = UIAlertController(title: "Quarry", message: "In Progress!", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Quarry", message: "In Progress!", preferredStyle: UIAlertControllerStyle.alert)
             
             // add an action (button)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             
             // show the alert
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
         
     }

@@ -58,12 +58,12 @@ class QuarryPageContentViewController: UIViewController {
         
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode =  UIViewContentMode.ScaleAspectFill
+        imageView.contentMode =  UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         imageView.image = background
         imageView.center = view.center
          view.addSubview(imageView)
-         self.view.sendSubviewToBack(imageView)
+         self.view.sendSubview(toBack: imageView)
     }
     /*
     // MARK: - Navigation
@@ -76,18 +76,18 @@ class QuarryPageContentViewController: UIViewController {
     */
     func tappedView(){
       
-        let detailViewPageMenu = self.storyboard?.instantiateViewControllerWithIdentifier("QuarryDetailViewController") as! QuarryDetailViewController
+        let detailViewPageMenu = self.storyboard?.instantiateViewController(withIdentifier: "QuarryDetailViewController") as! QuarryDetailViewController
         detailViewPageMenu.titleLabelText = titleLabelText
         detailViewPageMenu.title = self.titleText
         let navController = UINavigationController(rootViewController: detailViewPageMenu)
         navController.navigationBar.barTintColor = UIColor(red: 30.0/255.0, green: 30.0/255.0, blue: 30.0/255.0, alpha: 1.0)
-        navController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orangeColor()]
-        detailViewPageMenu.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done,target: self,action: #selector(QuarryPageContentViewController.dismiss))
-        dispatch_async(dispatch_get_main_queue(), {
-            self.presentViewController(navController, animated: true, completion: nil)
+        navController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orange]
+        detailViewPageMenu.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done,target: self,action: #selector(dismissView))
+        DispatchQueue.main.async(execute: {
+            self.present(navController, animated: true, completion: nil)
         })
     }
-    func dismiss(){
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func dismissView(){
+        self.dismiss(animated: true, completion: nil)
     }
 }
